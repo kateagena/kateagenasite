@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Let's connect — Kate Agena, PhD</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF9F7;
+    --cream:#F8F4EE;
+    --ink:#323232;
+    --muted:#6a6a66;
+    --rule-soft:#dcdad0;
+    --dot:#B6CEFF;
+    --field-bg:#B6CEFF;       /* light blue periwinkle per palette */
+    --field-border:#B6CEFF;
+    --field-focus:#193497;
+    --yellow-btn:#FFDC60;
+    --yellow-btn-hover:#f0cb45;
+    --accent:#193497;
+  }
+  *{box-sizing:border-box}
+  html{font-size:14px}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:'Inter', Helvetica, Arial, sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    background-image: radial-gradient(var(--dot) 1px, transparent 1px);
+    background-size: 14px 14px;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+    min-height:100vh;display:flex;flex-direction:column;
+  }
+  a{color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 40px;width:100%}
+
+  header.site{padding:26px 0 8px}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .brand{
+    font-family:'Inter Tight',Helvetica,Arial,sans-serif;
+    font-weight:700;font-size:1.8rem;letter-spacing:-0.01em;line-height:1.1;
+    text-decoration:none;color:var(--ink);
+  }
+  .nav-right{display:flex;align-items:center;gap:16px}
+  .nav-right a.cta{
+    font-size:13px;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;
+  }
+  .li-btn{
+    width:30px;height:30px;border-radius:5px;background:#111;color:#fff;
+    display:inline-flex;align-items:center;justify-content:center;
+    text-decoration:none;font-size:12px;font-weight:700;
+  }
+
+  main{flex:1;padding:72px 0 72px}
+  h1.title{
+    font-family:'Inter Tight',Helvetica,Arial,sans-serif;
+    font-weight:400;
+    font-size:4.41rem;
+    text-align:center;
+    margin:0 0 48px;
+    letter-spacing:-0.02em;
+    line-height:1.1;
+    color:var(--ink);
+  }
+
+  form{max-width:560px;margin:0 auto}
+  .field{margin-bottom:24px}
+  .legend, .field > label{
+    display:block;
+    font-size:13px;font-weight:500;color:var(--ink);
+    margin-bottom:8px;
+  }
+  .req{color:var(--muted);font-weight:400;font-size:12px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .sub-label{
+    display:block;font-size:12px;color:var(--ink);margin-bottom:6px;font-weight:400;
+  }
+  input[type=text], input[type=email], textarea{
+    width:100%;
+    background:var(--field-bg);
+    border:1.5px solid var(--field-border);
+    border-radius:28px;
+    padding:13px 18px;
+    font-family:inherit;font-size:15px;color:var(--ink);
+    outline:none;
+    transition:box-shadow .15s ease, background .15s ease;
+  }
+  textarea{border-radius:22px;min-height:140px;resize:vertical}
+  input:focus, textarea:focus{
+    box-shadow: 0 0 0 3px rgba(25,52,151,0.22);
+  }
+  .check{
+    display:flex;align-items:center;gap:10px;margin-top:10px;
+    font-size:13px;color:var(--ink);cursor:pointer;
+  }
+  .check input{
+    appearance:none;
+    width:18px;height:18px;border-radius:50%;
+    border:1.5px solid var(--field-border);
+    background:var(--field-bg);cursor:pointer;
+    display:inline-flex;align-items:center;justify-content:center;position:relative;
+  }
+  .check input:checked::after{
+    content:"";width:8px;height:8px;border-radius:50%;background:var(--field-focus);position:absolute;
+  }
+
+  button.submit{
+    margin-top:6px;
+    background:var(--yellow-btn);
+    border:5px solid var(--yellow-btn);
+    color:var(--ink);
+    font-family:inherit;font-size:14px;font-weight:500;
+    padding:10px 26px;border-radius:999px;cursor:pointer;
+    transition:background .15s ease, transform .1s ease;
+  }
+  button.submit:hover{background:var(--yellow-btn-hover);border-color:var(--yellow-btn-hover)}  button.submit:active{transform:translateY(1px)}
+
+  .thanks{
+    max-width:560px;margin:60px auto 0;
+    text-align:center;
+    font-family:'Inter Tight',sans-serif;font-weight:500;
+    font-size:22px;color:var(--ink);
+    display:none;
+  }
+  form.sent{display:none}
+  .thanks.sent{display:block}
+
+  footer.site{
+    text-align:center;padding:24px 0 40px;
+    font-size:12px;color:var(--muted);
+  }
+
+  @media (max-width: 700px){
+    .wrap{padding:0 24px}
+    h1.title{font-size:3.2rem}
+    .row{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <div class="nav">
+        <a href="index.html" class="brand">Content Design Leadership w/Kate Agena, PhD</a>
+        <div class="nav-right">
+          <a href="contact.html" class="cta">Start a conversation</a>
+          <a href="#" class="li-btn" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <h1 class="title">Let's connect</h1>
+
+      <form id="contact-form" novalidate>
+        <div class="field">
+          <span class="legend">Name</span>
+          <div class="row">
+            <div>
+              <label class="sub-label" for="first">First name</label>
+              <input id="first" type="text" name="first" autocomplete="given-name" />
+            </div>
+            <div>
+              <label class="sub-label" for="last">Last name</label>
+              <input id="last" type="text" name="last" autocomplete="family-name" />
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Email <span class="req">(required)</span></label>
+          <input id="email" type="email" name="email" autocomplete="email" required />
+          <label class="check">
+            <input type="checkbox" name="newsletter" />
+            <span>Sign up for news and updates</span>
+          </label>
+        </div>
+
+        <div class="field">
+          <label for="message">Message <span class="req">(required)</span></label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+
+        <button type="submit" class="submit">Submit</button>
+      </form>
+
+      <div class="thanks" id="thanks">
+        Thanks — I'll be in touch soon.
+      </div>
+    </main>
+
+    <footer class="site">© 2026 Kate Agena</footer>
+  </div>
+
+<script>
+  const form = document.getElementById('contact-form');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = form.email.value.trim();
+    const msg = form.message.value.trim();
+    if(!email){form.email.focus();return;}
+    if(!msg){form.message.focus();return;}
+    form.classList.add('sent');
+    document.getElementById('thanks').classList.add('sent');
+  });
+</script>
+</body>
+</html>

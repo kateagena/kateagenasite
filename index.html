@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Content Design Leadership w/Kate Agena, PhD</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF9F7;                /* offwhite */
+    --cream:#F8F4EE;             /* cream */
+    --ink:#323232;               /* charcoal */
+    --ink-2:#323232;
+    --muted:#6a6a66;
+    --rule:#d9d7cf;
+    --card:#FFF8DF;              /* light yellow */
+    --card-border:#323232;       /* charcoal */
+    --pill-bg:#FBF9F7;           /* offwhite */
+    --dot:#B6CEFF;
+    --blue:#193497;              /* blue: Team training / GenAI */
+    --light-blue:#B6CEFF;        /* light blue: Team building */
+    --yellow:#FFDC60;            /* yellow: Voice & tone / Content strategy */
+    --green:#00BE4A;             /* green: Foundations */
+    --light-green:#CCD2DB;       /* light green (per spec) */
+    --pink:#FFC7CE;              /* pink: Hiring */
+    --scribble:#193497;
+    --yellow-btn:#FFDC60;
+    --yellow-btn-hover:#f0cb45;
+  }
+  *{box-sizing:border-box}
+  html{font-size:14px}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:'Inter', Helvetica, Arial, sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    background-image: radial-gradient(var(--dot) 1px, transparent 1px);
+    background-size: 14px 14px;
+    background-position: 0 0;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  a{color:inherit}
+
+  .wrap{max-width:1120px;margin:0 auto;padding:0 40px}
+
+  /* Header */
+  header.site{padding:26px 0 8px}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .brand{font-family:'Inter Tight', Helvetica, Arial, sans-serif;font-weight:700;font-size:1.8rem;letter-spacing:-0.01em;color:var(--ink);text-decoration:none;line-height:1.1}
+  .nav-right{display:flex;align-items:center;gap:16px}
+  .nav-right a.cta{
+    font-size:13px;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;color:var(--ink);
+  }
+  .li-btn{
+    width:30px;height:30px;border-radius:5px;background:#111;color:#fff;
+    display:inline-flex;align-items:center;justify-content:center;
+    text-decoration:none;font-size:12px;font-weight:700;
+  }
+  .li-btn:hover{background:#000}
+
+  /* Hero */
+  .hero{
+    margin-top:56px;
+    max-width:820px;
+  }
+  .hero-card{
+    background:var(--card);
+    border:5px solid var(--card-border);
+    border-radius:5px;
+    padding:34px 40px 40px;
+    box-shadow:5px 5px 0 0 var(--light-blue);
+  }
+  .hello{
+    font-size:2.74rem;color:var(--ink);margin:0 0 14px;font-weight:400;line-height:1.1;
+  }
+  .hero h1{
+    font-family:'Inter Tight', Helvetica, Arial, sans-serif;
+    font-weight:400;
+    font-size:4.41rem;
+    line-height:1.1;
+    letter-spacing:-0.02em;
+    margin:0;
+    color:var(--ink);
+  }
+  .hero h1 .scribble{position:relative;display:inline-block;padding:0 0.18em}
+  .hero h1 .scribble svg{
+    position:absolute;inset:-0.18em -0.05em -0.22em -0.05em;width:calc(100% + 0.1em);height:calc(100% + 0.4em);
+    pointer-events:none;overflow:visible;
+  }
+
+  /* Capabilities */
+  .capabilities{
+    display:grid;
+    grid-template-columns: 180px 1fr;
+    gap:60px;
+    align-items:start;
+    margin-top:52px;
+  }
+  .cap-label{
+    font-family:'Inter Tight', sans-serif;
+    font-weight:500;
+    letter-spacing:-0.01em;
+  }
+  .pills{
+    display:flex;flex-direction:column;gap:16px;
+    max-width:none;
+    align-items:flex-end;
+  }
+  .pills-row{display:flex;gap:14px;justify-content:flex-end;flex-wrap:wrap}
+  .pill{
+    background:var(--pill-bg);
+    border:5px solid #444;
+    border-radius:999px;
+    padding:14px 28px;
+    font-size:2.74rem;
+    font-weight:400;
+    color:var(--ink);
+    white-space:nowrap;
+    line-height:1.3;
+  }
+  .pill.blue{border-color:var(--blue)}
+  .pill.yellow{border-color:var(--yellow)}
+  .pill.green{border-color:var(--green)}
+  .pill.lavender{border-color:var(--light-blue)}
+  .pill.pink{border-color:var(--pink)}
+
+  /* Focus accordion section */
+  .focus{
+    margin-top:140px;
+    display:grid;
+    grid-template-columns: 180px 1fr;
+    gap:60px;
+    align-items:start;
+    padding-bottom:120px;
+  }
+  .focus-label{
+    font-family:'Inter Tight',sans-serif;
+    font-weight:500;
+    color:var(--ink);
+    padding-top:2px;
+    position:sticky;top:40px;
+    letter-spacing:-0.02em;
+  }
+  .acc{width:100%;max-width:640px;margin-left:auto}
+  .acc-item{border-top:1px solid #bfbdb4}
+  .acc-item:last-child{border-bottom:1px solid #bfbdb4}
+  .acc-head{
+    width:100%;
+    display:flex;align-items:center;justify-content:space-between;gap:20px;
+    background:transparent;border:0;
+    padding:18px 4px;
+    font-family:inherit;
+    font-size:18px;font-weight:700;color:var(--ink);
+    text-align:left;cursor:pointer;
+  }
+  .acc-icon{
+    font-family:inherit;font-size:22px;font-weight:300;color:#333;line-height:1;
+  }
+  .acc-panel{
+    display:none;
+    padding:0 4px 22px;
+    color:var(--ink-2);
+    font-size:14.5px;
+    line-height:1.6;
+  }
+  .acc-item.open .acc-panel{display:block}
+  .acc-panel p{margin:0 0 14px}
+  .acc-panel p:last-child{margin-bottom:0}
+
+  /* Trusted by */
+  .trusted{
+    padding:46px 0 32px;
+    margin-top:40px;
+  }
+  .trusted-label{
+    font-family:'Inter Tight',sans-serif;
+    font-weight:500;color:var(--ink);
+    margin:0 0 28px;
+    letter-spacing:-0.01em;
+  }
+  .logos{display:flex;align-items:center;justify-content:center;gap:96px;flex-wrap:wrap}
+  .logo{height:85px;display:inline-flex;align-items:center}
+  .logo img{height:100%;width:auto;display:block;object-fit:contain}
+  .logo svg{height:100%;width:auto;display:block}
+
+  footer.site{
+    text-align:center;
+    padding:24px 0 40px;
+    font-size:12px;color:var(--muted);
+  }
+
+  .cap-label, .focus-label, .mission-label, .articles-label, .about-label, .trusted-label{
+    font-size:3.53rem;line-height:1.05;letter-spacing:-0.02em;
+  }
+
+  @media (max-width: 800px){
+    .hero h1{font-size:3.4rem}
+    .capabilities, .focus, .mission, .articles, .about{grid-template-columns:1fr;gap:20px}
+    .focus-label{position:static}
+    .pills,.pills-row{align-items:flex-start;justify-content:flex-start}
+    .logos{gap:40px}
+    .mission-card{max-width:100%}
+    .article-grid{grid-template-columns:1fr}
+    .about-grid{grid-template-columns:1fr}
+  }
+
+  /* Mission */
+  .mission{
+    display:grid;
+    grid-template-columns: 180px 1fr;
+    gap:60px;
+    align-items:start;
+    margin-top:84px;
+  }
+  .mission-card-wrap{display:flex;justify-content:flex-end}
+  .mission-label{
+    font-family:'Inter Tight',sans-serif;
+    font-weight:500;color:var(--ink);
+    padding-top:4px;letter-spacing:-0.01em;
+  }
+  .mission-card{
+    background:var(--card);
+    border:5px solid var(--card-border);
+    border-radius:5px;
+    padding:28px 32px;
+    max-width:640px;
+    font-size:2.74rem;
+    line-height:1.25;
+    color:var(--ink);
+  }
+  .mission-card p{margin:0}
+
+  /* Articles */
+  .articles{
+    margin-top:100px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+  .articles-label{
+    font-family:'Inter Tight',sans-serif;
+    font-weight:500;color:var(--ink);
+    letter-spacing:-0.01em;margin:0 0 22px;
+  }
+  .article-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:32px;align-items:start;
+  }
+  .article{display:flex;flex-direction:column;gap:14px}
+  .article-thumb{
+    width:100%;aspect-ratio:16/9;border-radius:2px;overflow:hidden;
+    background:transparent;position:relative;
+  }
+  .article-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .article a.title{
+    font-size:14px;line-height:1.45;color:var(--ink);
+    text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;
+    max-width:95%;
+  }
+  .article a.title:hover{color:var(--blue)}
+
+  /* About */
+  .about{
+    margin-top:100px;
+    display:block;
+  }
+  .about-label{
+    font-family:'Inter Tight',sans-serif;
+    font-weight:500;color:var(--ink);
+    letter-spacing:-0.01em;
+    margin:0 0 32px;
+  }
+  .about-grid{
+    display:grid;grid-template-columns:360px 1fr;gap:48px;align-items:start;
+    max-width:880px;
+  }
+  .about-photo{
+    width:100%;max-width:360px;aspect-ratio:1107/939;
+    display:block;position:relative;
+  }
+  .about-photo img{width:100%;height:100%;object-fit:contain;display:block}
+  .about-bio{font-size:14px;line-height:1.6;color:var(--ink)}
+  .about-bio p{margin:0 0 14px}
+  .about-bio p:last-child{margin-bottom:0}
+  .about-bio a{color:var(--ink);text-decoration:underline;text-underline-offset:2px}
+  .about-bio a:hover{color:var(--blue)}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <div class="nav">
+        <a href="index.html" class="brand">Content Design Leadership w/Kate Agena, PhD</a>
+        <div class="nav-right">
+          <a href="contact.html" class="cta">Start a conversation</a>
+          <a href="#" class="li-btn" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-card">
+        <p class="hello">Hello. I'm Kate. <span aria-hidden="true">👋</span></p>
+        <h1>Content experience design leadership that <span class="scribble">scales<svg viewBox="0 0 200 100" preserveAspectRatio="none" aria-hidden="true"><path d="M 188 48 C 196 18, 148 6, 96 5 C 44 4, 6 20, 7 52 C 8 82, 60 96, 112 95 C 158 94, 194 80, 193 52 C 192 38, 180 28, 156 22" fill="none" stroke="#B6CEFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></h1>
+      </div>
+    </section>
+
+    <!-- Capabilities -->
+    <section class="capabilities">
+      <div class="cap-label">Capabilities</div>
+      <div class="pills">
+        <div class="pills-row">
+          <span class="pill blue">Team training</span>
+          <span class="pill yellow">Voice &amp; tone</span>
+        </div>
+        <div class="pills-row">
+          <span class="pill green">Foundations</span>
+          <span class="pill lavender">Team building</span>
+          <span class="pill pink">Hiring</span>
+        </div>
+        <div class="pills-row">
+          <span class="pill yellow">Content strategy</span>
+          <span class="pill blue">GenAI strategy</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="mission">
+      <div class="mission-label">Mission</div>
+      <div class="mission-card-wrap">
+        <div class="mission-card">
+          <p>I'm passionate about creating culture, strategy, and systems that produce consistent, brand-driven, human-centered end-to-end content experiences.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Focus / Accordion -->
+    <section class="focus">
+      <div class="focus-label">Focus</div>
+      <div class="acc" id="accordion">
+        <div class="acc-item" data-idx="0">
+          <button class="acc-head" aria-expanded="false">
+            <span>Creating culture that raises the bar on quality</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-panel">
+            <p>I use human-centered culture and tech-centered optimizations to improve content quality and consistency across marketing, product, engineering, and support.</p>
+            <p>Most organizations are highly-siloed with each function focusing solely on their own metrics and results. While everyone might be aware of or abiding by some set of brand guidelines, writing is highly subjective.</p>
+            <p>Building a culture around writing quality through some kind of community of practice is a start, but collaboration around a shared tool, such as an AI writing assistant, can be the mechanism that solidifies that connection. Beyond the benefits of having a shared interest in training the tool, everyday use of the assistant brings the group's guidance to the writer where they are. No more expecting writers to refer to a style guide or design system.</p>
+          </div>
+        </div>
+        <div class="acc-item" data-idx="1">
+          <button class="acc-head" aria-expanded="false">
+            <span>Preparing for the future with human-centered strategy</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-panel">
+            <p>I design future-ready centralized content orgs with separate teams focused on foundations, growth/optimization, and innovation.</p>
+            <p>Content strategy builds out the design system with guidance and patterns to support end-to-end content development, while their ops partner focuses on setting up the right tooling to support efficient, consistent use of the design system.</p>
+            <p>With these foundations ready to use, content designers can put their focus into understanding and optimizing the products they are working on.</p>
+            <p>Finally, another team focuses on what's on the way — conversation design that incorporates GenAI, training LLMs on product voice and tone, and exploring how AI opens new possibilities for personalization.</p>
+          </div>
+        </div>
+        <div class="acc-item" data-idx="2">
+          <button class="acc-head" aria-expanded="false">
+            <span>Building systems for end-to-end consistency</span>
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-panel">
+            <p>I rely on a combination of content documentation and patterns in the design system along with tools, like the AI writing assistant Writer, to support end-to-end consistency across a company. Without relevant and flexible guidance in context, it's unlikely writers will be able to apply suggestions.</p>
+            <p>Additional tech-centered solutions can bring consistency to a new level. With string management tools, you can dramatically reduce development and translation timelines and increase your ability to change your content as needed. These tools also allow for content to be treated as components for reuse. Once your reusable content is tested and optimized, you have a system in place that supports clarity, consistency, and even lowers development and translation costs and timelines.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles, interviews, & podcasts -->
+    <section class="articles">
+      <h3 class="articles-label">Articles, interviews, &amp; podcasts</h3>
+      <div class="article-grid">
+        <div class="article">
+          <div class="article-thumb">
+            <img src="assets/article-patterns.png" alt="The power of patterns and playbooks in content design" />
+          </div>
+          <a class="title" href="#">The power of patterns and playbooks in content design</a>
+        </div>
+        <div class="article">
+          <div class="article-thumb">
+            <img src="assets/article-panel.png" alt="Punkt spotlight: Championing content-led UX" />
+          </div>
+          <a class="title" href="#">Punkt spotlight: Championing content-led UX</a>
+        </div>
+        <div class="article">
+          <div class="article-thumb">
+            <img src="assets/article-podcast.png" alt="Humans of AI podcast: Redefining content design" />
+          </div>
+          <a class="title" href="#">Humans of AI podcast: Redefining content design</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Kate -->
+    <section class="about">
+      <div class="about-label">About Kate</div>
+      <div class="about-grid">
+        <div class="about-photo">
+          <img src="assets/kate.png" alt="Kate Agena" />
+        </div>
+        <div class="about-bio">
+          <p>With decades working to elevate writing professions, Kate's content design origin story started with a PhD from Purdue University's Rhetoric and Composition program before joining IBM's legendary User Technology group at the Silicon Valley Lab, just as DITA became an OASIS standard.</p>
+          <p>Her 2008 research asserted that technical communicators could use the emergence of iterative software development processes to influence the design process on behalf of the user from the earliest stages.</p>
+          <p>She's brought this same vision to content design, where she built the UX product content org at McAfee, where her team was present from the start and actively led the design process. She is now VP of Content Design at SAP.</p>
+          <p>Kate is also the founder of <a href="#">Content Design Leaders</a>, a membership community that connects UX content design leaders to collaborate to advance the field and their own careers.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trusted by -->
+    <section class="trusted">
+      <h3 class="trusted-label">Trusted by</h3>
+      <div class="logos">
+        <div class="logo" aria-label="IBM">
+          <img src="assets/ibm.png" alt="IBM" />
+        </div>
+        <div class="logo" aria-label="Wipro">
+          <img src="assets/wipro.png" alt="Wipro" />
+        </div>
+        <div class="logo" aria-label="McAfee">
+          <img src="assets/mcafee.png" alt="McAfee" />
+        </div>
+        <div class="logo" aria-label="SAP">
+          <img src="assets/sap.png" alt="SAP" />
+        </div>
+      </div>
+    </section>
+
+    <footer class="site">© 2026 Kate Agena</footer>
+  </div>
+
+<script>
+  const acc = document.getElementById('accordion');
+  acc.querySelectorAll('.acc-head').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.acc-item');
+      const isOpen = item.classList.contains('open');
+      acc.querySelectorAll('.acc-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.acc-head').setAttribute('aria-expanded','false');
+        i.querySelector('.acc-icon').textContent = '+';
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+        item.querySelector('.acc-icon').textContent = '–';
+      }
+    });
+  });
+</script>
+</body>
+</html>
