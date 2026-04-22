@@ -148,7 +148,7 @@
         <a href="index.html" class="brand">Content Design Leadership w/Kate Agena, PhD</a>
         <div class="nav-right">
           <a href="contact.html" class="cta">Start a conversation</a>
-          <a href="#" class="li-btn" aria-label="LinkedIn">in</a>
+          <a href="https://www.linkedin.com/in/kate-agena/" target="_blank" rel="noopener" class="li-btn" aria-label="LinkedIn">in</a>
         </div>
       </div>
     </header>
@@ -156,7 +156,14 @@
     <main>
       <h1 class="title">Let's connect</h1>
 
-      <form id="contact-form" novalidate>
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <!-- Replace with your real Web3Forms access key from https://web3forms.com -->
+        <input type="hidden" name="access_key" value="26828b29-cb6f-4b62-a17a-3bf2b1442365" />
+        <input type="hidden" name="subject" value="New message from kateagena.com" />
+        <input type="hidden" name="from_name" value="kateagena.com contact form" />
+        <!-- Honeypot: bots fill this, humans don't -->
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+
         <div class="field">
           <span class="legend">Name</span>
           <div class="row">
@@ -174,10 +181,6 @@
         <div class="field">
           <label for="email">Email <span class="req">(required)</span></label>
           <input id="email" type="email" name="email" autocomplete="email" required />
-          <label class="check">
-            <input type="checkbox" name="newsletter" />
-            <span>Sign up for news and updates</span>
-          </label>
         </div>
 
         <div class="field">
@@ -198,14 +201,40 @@
 
 <script>
   const form = document.getElementById('contact-form');
-  form.addEventListener('submit', (e) => {
+  const thanks = document.getElementById('thanks');
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const email = form.email.value.trim();
     const msg = form.message.value.trim();
     if(!email){form.email.focus();return;}
     if(!msg){form.message.focus();return;}
-    form.classList.add('sent');
-    document.getElementById('thanks').classList.add('sent');
+
+    const btn = form.querySelector('button.submit');
+    const originalLabel = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    try{
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      const data = await res.json().catch(() => ({}));
+      if(res.ok && data.success){
+        form.classList.add('sent');
+        thanks.classList.add('sent');
+      } else {
+        btn.disabled = false;
+        btn.textContent = originalLabel;
+        alert(data.message || 'Something went wrong. Please try again or email directly.');
+      }
+    } catch(err){
+      btn.disabled = false;
+      btn.textContent = originalLabel;
+      alert('Network error. Please try again or email directly.');
+    }
   });
 </script>
 </body>
