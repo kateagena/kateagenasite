@@ -297,6 +297,50 @@
   .about-bio p:last-child{margin-bottom:0}
   .about-bio a{color:var(--ink);text-decoration:underline;text-underline-offset:2px}
   .about-bio a:hover{color:var(--blue)}
+
+  /* Mobile overrides — placed last so they win */
+  @media (max-width: 800px){
+    html{overflow-x:hidden}
+    body{overflow-x:hidden}
+    .wrap{padding:0 20px}
+    .hero{max-width:100%;margin-top:32px}
+    .hero-card{padding:24px 22px 28px}
+    .hero h1{font-size:3rem;letter-spacing:-0.02em}
+    .hello{font-size:2rem}
+    .brand{font-size:1.3rem;max-width:60vw}
+
+    .cap-label, .focus-label, .mission-label, .articles-label, .about-label, .trusted-label{
+      font-size:2.4rem;
+    }
+
+    .capabilities{margin-top:60px}
+    .mission, .focus, .about-grid, .article-grid{
+      display:block !important;
+      grid-template-columns:1fr !important;
+      margin-top:60px;
+    }
+    .mission-card-wrap{display:block;margin-top:16px}
+    .mission-card{max-width:100%;width:100%;font-size:1.6rem;padding:22px 24px}
+    .focus{margin-top:60px}
+    .focus-accordion-wrap{max-width:100% !important;width:100% !important;margin-top:16px}
+    .acc{max-width:100% !important}
+
+    .pill{font-size:1.4rem;padding:10px 20px}
+    .pills-row{justify-content:flex-start;gap:10px}
+
+    .articles{margin-top:60px}
+    .article-grid{display:grid !important;grid-template-columns:1fr !important;gap:32px}
+
+    .about{margin-top:60px}
+    .about-grid{gap:24px}
+    .about-photo{max-width:260px;padding:0;margin:16px 0 0}
+    .about-bio{font-size:16px}
+
+    .trusted{margin-top:60px}
+    .logos{gap:28px 40px;justify-content:center}
+    .logo{height:56px}
+    img{max-width:100%;height:auto}
+  }
 </style>
 </head>
 <body>
