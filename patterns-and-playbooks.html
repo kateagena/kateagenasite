@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The power of patterns and playbooks in content design — Kate Agena, PhD</title>
+<meta name="description" content="Build out your content design system to reduce stress and create consistently effective content across the end-to-end experience.">
+<link rel="canonical" href="https://uxdesign.cc/the-power-of-patterns-and-playbooks-in-content-design-6385a3d8d5bd">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kate Agena">
+<meta property="og:title" content="The power of patterns and playbooks in content design">
+<meta property="og:description" content="Build out your content design system to reduce stress and create consistently effective content across the end-to-end experience.">
+<meta property="og:url" content="https://www.kateagena.com/patterns-and-playbooks.html">
+<meta property="og:image" content="https://www.kateagena.com/assets/article-patterns.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The power of patterns and playbooks in content design">
+<meta name="twitter:description" content="Build out your content design system to reduce stress and create consistently effective content.">
+<meta name="twitter:image" content="https://www.kateagena.com/assets/article-patterns.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%91%8B%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF9F7;--cream:#F8F4EE;--ink:#323232;--ink-2:#323232;--muted:#6a6a66;--rule:#d9d7cf;
+    --card:#FFF8DF;--card-border:#323232;--pill-bg:#FBF9F7;--dot:#B6CEFF;
+    --blue:#193497;--light-blue:#B6CEFF;--yellow:#FFDC60;--green:#00BE4A;--pink:#FFC7CE;
+    --field-bg:#B6CEFF;--field-border:#B6CEFF;--yellow-btn:#FFDC60;--yellow-btn-hover:#f0cb45;
+  }
+  *{box-sizing:border-box}
+  html{font-size:14px}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:'Inter', Helvetica, Arial, sans-serif;color:var(--ink);background:var(--bg);
+    background-image: radial-gradient(var(--dot) 1px, transparent 1px);background-size:14px 14px;
+    -webkit-font-smoothing:antialiased;line-height:1.5;
+  }
+  a{color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 40px}
+
+  header.site{padding:26px 0 8px}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .brand{font-family:'Inter Tight', Helvetica, Arial, sans-serif;font-weight:700;font-size:1.8rem;letter-spacing:-0.01em;color:var(--ink);text-decoration:none;line-height:1.1}
+  .nav-right{display:flex;align-items:center;gap:18px}
+  .nav-right a.navlink{font-size:18px;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;color:var(--ink)}
+  .li-btn{width:30px;height:30px;border-radius:5px;background:#111;color:#fff;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-size:12px;font-weight:700}
+  .li-btn:hover{background:#000}
+
+  .article{max-width:768px;margin:40px auto 0;background:#fff;border:1px solid var(--rule);border-radius:6px;padding:52px 60px;box-shadow:0 2px 12px rgba(50,50,50,0.05)}
+  .back{font-size:14px;color:var(--muted);text-decoration:none;display:inline-block;margin-bottom:28px}
+  .back:hover{color:var(--blue)}
+  .a-meta{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);margin-bottom:16px}
+  .tag{font-family:'Inter Tight',sans-serif;font-weight:600;font-size:11px;letter-spacing:0.04em;text-transform:uppercase;color:var(--blue);border:1.5px solid var(--light-blue);border-radius:999px;padding:3px 10px;background:var(--pill-bg)}
+  .a-title{font-family:'Inter Tight', Helvetica, Arial, sans-serif;font-weight:400;font-size:3.2rem;line-height:1.12;letter-spacing:-0.02em;margin:0 0 18px;color:var(--ink)}
+  .a-sub{font-size:20px;line-height:1.5;color:var(--muted);margin:0 0 22px}
+  .a-byline{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:14px 0;margin-bottom:32px}
+  .a-byline .who{font-size:14px;color:var(--ink)}
+  .a-byline a.medium{font-size:14px;color:var(--blue);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+
+  .body{font-size:19px;line-height:1.7;color:var(--ink)}
+  .body p{margin:0 0 22px}
+  .body h2{font-family:'Inter Tight',sans-serif;font-weight:500;font-size:1.9rem;line-height:1.2;letter-spacing:-0.01em;margin:44px 0 16px;color:var(--ink)}
+  .body a{color:var(--blue);text-decoration:underline;text-underline-offset:2px}
+  .body em{font-style:italic}
+  .body .opt strong{font-weight:600;color:var(--blue)}
+  figure{margin:30px 0;padding:0}
+  figure img{width:100%;height:auto;display:block;border:1px solid var(--rule);border-radius:3px;background:#fff}
+  figcaption{font-size:13px;color:var(--muted);margin-top:8px;text-align:center}
+  .refs p{font-size:16px;line-height:1.6;color:var(--ink-2);margin:0 0 12px}
+
+  .subscribe{max-width:768px;margin:48px auto 0;background:var(--card);border:5px solid var(--card-border);border-radius:5px;box-shadow:5px 5px 0 0 var(--light-blue);padding:30px 34px 34px}
+  .subscribe h2{font-family:'Inter Tight',sans-serif;font-weight:400;font-size:2.1rem;line-height:1.15;letter-spacing:-0.02em;margin:0 0 8px;color:var(--ink)}
+  .subscribe p{font-size:16px;line-height:1.55;color:var(--ink);margin:0 0 18px;max-width:520px}
+  .sub-form{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .sub-form input[type=email]{flex:1;min-width:240px;background:var(--field-bg);border:1.5px solid var(--field-border);border-radius:28px;padding:13px 18px;font-family:inherit;font-size:15px;color:var(--ink);outline:none;transition:box-shadow .15s ease}
+  .sub-form input[type=email]:focus{box-shadow:0 0 0 3px rgba(25,52,151,0.22)}
+  .sub-form button{background:var(--yellow-btn);border:5px solid var(--yellow-btn);color:var(--ink);font-family:inherit;font-size:17px;font-weight:700;padding:9px 26px;border-radius:999px;cursor:pointer;transition:background .15s ease, transform .1s ease}
+  .sub-form button:hover{background:var(--yellow-btn-hover);border-color:var(--yellow-btn-hover)}
+  .sub-form button:active{transform:translateY(1px)}
+  .sub-note{font-size:12px;color:var(--muted);margin:14px 0 0}
+
+  footer.site{text-align:center;padding:64px 0 40px;font-size:12px;color:var(--muted)}
+
+  @media (max-width:800px){
+    html,body{overflow-x:hidden}
+    .wrap{padding:0 20px}
+    .brand{font-size:1.3rem;max-width:60vw}
+    .nav-right{gap:14px}.nav-right a.navlink{font-size:16px}
+    .article{margin-top:24px;padding:28px 22px;border-radius:5px}
+    .a-title{font-size:2.3rem}
+    .a-sub{font-size:17px}
+    .body{font-size:17px}
+    .subscribe{padding:24px 22px 28px}
+    .sub-form button{width:100%}
+    img{max-width:100%;height:auto}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <div class="nav">
+        <a href="index.html" class="brand">Content Design Leadership w/Kate Agena, PhD</a>
+        <div class="nav-right">
+          <a href="writing.html" class="navlink">Writing</a>
+          <a href="contact.html" class="navlink">Start a conversation</a>
+          <a href="https://www.linkedin.com/in/kate-agena/" target="_blank" rel="noopener" class="li-btn" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+    </header>
+
+    <article class="article">
+      <a href="writing.html" class="back">← All writing</a>
+
+      <div class="a-meta"><span class="tag">Article</span><span>Feb 23, 2024 · 10 min read</span></div>
+      <h1 class="a-title">The power of patterns and playbooks in content design</h1>
+      <p class="a-sub">Build out your content design system to reduce stress and create consistently effective content across the end-to-end experience.</p>
+
+      <div class="a-byline">
+        <span class="who">By Kate Agena, PhD</span>
+        <a class="medium" href="https://uxdesign.cc/the-power-of-patterns-and-playbooks-in-content-design-6385a3d8d5bd" target="_blank" rel="noopener">Read the original on Medium →</a>
+      </div>
+
+      <figure>
+        <img src="https://miro.medium.com/v2/resize:fit:1400/1*Q_IYgWWZWPs22Kk5c-hNqQ.png" alt="Colorful graphic of stripes with one rounded end in purples, oranges, and yellow. Designed by Kate Agena." />
+      </figure>
+
+      <div class="body">
+        <p>Most content leaders agree that a style guide and terminology list belong in a design system — and that design system components must include content or sample content according to the correct content guidelines. This is a start, but I believe every content team should also work toward building out their own set of content components and patterns. Extensive patterns build consistency while reducing stress and allowing content designers to focus on larger design issues.</p>
+
+        <p>Writing is subjective and stakeholders are many. Often stakeholders don't agree on the best approach or even the desired outcome of a content experience. Recently, I found myself feeling the need to provide air cover for a content designer in a stakeholder review with an executive who had plenty of opinions and little context. Another content designer spent six months reacting to constantly shifting directions as the company went through some pretty severe leadership churn.</p>
+
+        <p>How, as an organizational leader of content designers, can I equip my team with the arguments, tools, and evidence they need to respond to contradictory and shifting demands?</p>
+
+        <p>I can help them develop the right questions ("It sounds like you're suggesting a solution to a problem. Could you tell me the issue you're trying to solve for instead?"). We can create artifacts for reference, such as an extra box in the Figma that explains the content strategy behind a specific flow. And, we can work closely with our UX research partners to demonstrate the effectiveness of our choices. But I think these tactics don't take advantage of the benefits gained from further creating a system for making content decisions.</p>
+
+        <h2>The inputs determine the outputs</h2>
+        <p>My PhD is in Rhetoric, and my understanding of the position content designers are in can be framed using Aristotle's framing of the rhetorical situation. The author and text sit at the center and work with three inputs — the audience, the purpose, and the context. Without these inputs, the rhetor cannot be successful.</p>
+
+        <figure>
+          <img src="https://miro.medium.com/v2/resize:fit:1400/1*KoDKzxmX8tU44FdwxUU_cA.png" alt="Venn diagram of the rhetorical situation with Writer and text at the center, surrounded by Audience, Purpose, and Context." />
+        </figure>
+
+        <p>In product design, the content designer's goal is to create the best solution for the situation — to deliver the right content to the right people at the right time.</p>
+
+        <p>We must know our audience, our users, based on information from our UX research teams and other cross-functional teams. We need to know their interests, their motivations, the reasons they choose our products, why they decide to stay or leave, when they engage, and how much they know and want to know about how our products work or give them value.</p>
+
+        <p>Purpose already becomes more difficult, as it shifts throughout the user's journey. Writing for a prospective customer is not the same as writing for one who is in a trial or one who has already purchased. Writing to drive conversion is not the same as writing to drive adoption or engagement.</p>
+
+        <p>Context and purpose are sometimes intertwined as we consider the user's journey using a service design perspective. Where are our users when they're on our mobile app vs. our desktop app? The information that interests them is different when they are at home on their computer than when they are out at a café using public Wi-Fi or only connected to the internet via their phone. The same applies to tasks they are willing to do in various situations.</p>
+
+        <p>Content designers are experts in assimilating all of these inputs into a content solution. In fact, the more information they have as inputs, the better the output. I use the following diagram to help my cross-functional partners understand that in order for a content designer to produce the best content, the detail and quality of inputs like these is crucial.</p>
+
+        <figure>
+          <img src="https://miro.medium.com/v2/resize:fit:1400/1*INeutYsvduybL-17H9MGRg.png" alt="Diagram showing the specific content solution with arrows going into it from bubbles of inputs that include cross-functional teams, guidelines, and constraints." />
+        </figure>
+
+        <p>If the goals of the experience are not clear, the content designer doesn't know, for example, if they are writing to solve a problem of adoption or to get an already motivated user set up as quickly and easily as possible. Does the user already trust our brand and product enough to enter their personal information or do we need to write to build that trust by demonstrating that we are trustworthy? And what data do we have about this point in the user's journey?</p>
+
+        <p>Given the degree of complexity involved in content design work, carefully developed patterns provide boundaries and reduce the number of variables a content designer must manage. Instead of making all of these writing choices for every situation ad hoc, the pattern steps in to provide a proven framework as a starting point.</p>
+
+        <h2>Structured writing reduces stress and leads to more consistent content</h2>
+        <p>My initial work in content was writing end user documentation in the structured format of DITA XML. DITA stands for Darwin Information Typing Architecture. Templates for concept, task, and reference topics each include a structured series of modular sections for content. The resulting consistency reduces the cognitive load for both writers and readers.</p>
+
+        <p>Even if you're working in Figma, you can create your own architecture of templates for the different types of content elements you produce. For example, our product uses action center (AC) cards as the main driver of user engagement from the dashboard. These AC cards flex in purpose, covering various goals that arise from the business or from the user — everything from driving feature adoption or engagement to cross-sell/upsell.</p>
+
+        <p>Each AC card has three main text elements: a heading, a body sentence/paragraph, and one or two calls-to-action (CTAs).</p>
+
+        <figure>
+          <img src="https://miro.medium.com/v2/resize:fit:1338/1*2WWDFO6KLpH9gyJ__ZyFQA.png" alt="Wireframe of an AC card with sections for a heading, a body sentence or paragraph, a main CTA, and a secondary CTA." />
+        </figure>
+
+        <p>Without established patterns, content designers have a lot of options open to them. And they often have stakeholders asking for different approaches. To land on a pattern, we have to consider all of the inputs mentioned above. Where in the user's journey is this specific AC card appearing? What is the main goal?</p>
+
+        <p>And what strategy are we using for the content? Obviously, we have our voice to consider. But beyond that, we often get conflicting pressures to reduce the amount of words to the bare minimum, to make the content more friendly and guiding, or to make all of the content benefit-led with a punchy, marketing feel. Especially if the work impacts something as widely used as a product's main dashboard, you might easily have input from 20 or more Product Managers (PMs).</p>
+
+        <h2>Mapping voice and tone based on user context</h2>
+        <p>To begin to map how our voice and tone flex based on user context, I developed both a message architecture (á la Margot Bloomstein) to guide communication priorities and a set of quadrants to demonstrate how tone might change based on the situation. I borrowed this initial quadrant framework from Matthew Rayback of Adobe who shared it in his presentation at the 2023 Confab conference.</p>
+
+        <p>The message architecture establishes a hierarchy of communication goals and helps content designers adapt our brand verbal guidelines for use in product.</p>
+
+        <figure>
+          <img src="https://miro.medium.com/v2/resize:fit:1400/1*X8vLtzlKJ8DuNj5Qr72gyw.jpeg" alt="Message architecture listing prioritized communication qualities for the product's content." />
+        </figure>
+
+        <p>From there, I took the qualities I identified for the message architecture and provided descriptions specific to each quadrant. I included examples of content that belong in each quadrant.</p>
+
+        <figure>
+          <img src="https://miro.medium.com/v2/resize:fit:1400/1*kr1nhGDgS_mAEC2BJ7_nkQ.jpeg" alt="Quadrant diagram mapping how tone shifts across user contexts, with example content in each quadrant." />
+        </figure>
+
+        <p>This is a step toward providing writers with actionable, repeatable directives they can use while developing content. The next step, however, is where we take this foundation and build out content patterns that are backed by research and agreed upon by all important stakeholder groups.</p>
+
+        <h2>Building patterns that can flex across the user's journey</h2>
+        <p>Now that our quadrant diagram gives a notion of how voice and tone flex depending on the audience's context, we can start to build out patterns for UI elements.</p>
+
+        <p>Using our example of AC cards and their three elements, we can initially consider various strategy options for each element and combination of elements. Let's imagine the AC card's goal is to encourage a user who has not yet turned on the VPN feature to turn it on.</p>
+
+        <p class="opt">The heading can focus very directly on the task: <strong>Set up VPN</strong></p>
+        <p class="opt">Or it can be benefit-led with more marketing-focused writing: <strong>Keep your browsing activity private</strong></p>
+        <p class="opt">Or it can act as a friendly guide: <strong>Let's secure your Wi-Fi connection</strong></p>
+
+        <p class="opt">The body sentence can provide a clear description of the feature: <strong>A VPN secures your connection so that only you can see your online activity.</strong></p>
+        <p class="opt">Or it can provide more details on the benefits or value prop: <strong>Make sure your VPN is running so you can browse the web privately and securely.</strong></p>
+        <p class="opt">Or it can provide more guidance: <strong>Use VPN whenever you are using a public Wi-Fi to keep your browsing activity private.</strong></p>
+
+        <p class="opt">The same goes for the CTA. It can state what happens when you click: <strong>Set up VPN</strong></p>
+        <p class="opt">Or be a call-to-value (CTV): <strong>Secure your connection</strong></p>
+        <p class="opt">Finally, you could try a CTA that offers to be there with you as a guide: <strong>Get started</strong></p>
+
+        <p>Now, we've developed an example of each of the strategies that have been suggested for each element. The next step is to combine them to get the most out of the AC card — if we only have three elements to work with, we don't want any content to be redundant.</p>
+
+        <p>If the heading is benefit-led, the body could be a more clear description, and then the CTA could go either way.</p>
+
+        <figure>
+          <img src="https://miro.medium.com/v2/resize:fit:1338/1*hYKAuiQBo3IGCNL4-eeNZA.png" alt="Example AC card combining a benefit-led heading with a clear descriptive body and a CTA." />
+        </figure>
+
+        <p>If the heading is direct, the body could focus on the value prop, and again the CTA could go either way.</p>
+
+        <figure>
+          <img src="https://miro.medium.com/v2/resize:fit:1338/1*b-31-6C8TndPjB_x4p7xaA.png" alt="Example AC card combining a direct heading with a value-prop body and a CTA." />
+        </figure>
+
+        <p>Another option is to focus on guiding the user in each section.</p>
+
+        <figure>
+          <img src="https://miro.medium.com/v2/resize:fit:1338/1*TU7_V56VZQhOdn0KxIL2uQ.png" alt="Example AC card that guides the user across the heading, body, and CTA." />
+        </figure>
+
+        <p>A mixture of strategies is likely the best solution. If all of the content elements focus on the benefit, the user won't even know what feature they're about to set up. If all of the content focuses on clarity, you might have the best results for ease-of use and low cognitive load, but your users might not have the motivation to set up the feature. Hopefully, your UX research and data science teams can give you some insights to weigh these options.</p>
+
+        <p>Once you have a set of variations, the testing can begin. Your UX research partners can do quantitative or qualitative studies to determine how well each option meets the objectives of the specific AC card or you can run AB tests and get the telemetric data. As part of the research plan, your stakeholders should agree on the desired outcomes, whether that be something like motivation to set up the feature or level of understanding the task they are doing and why.</p>
+
+        <p>You can do this for a group of AC cards that have the same purpose. For example. AC cards that drive adoption vs. AC cards that drive engagement vs. AC cards for cross-sell or upsell.</p>
+
+        <p>Eventually, you have enough data to agree on a pattern for each type of AC. card.</p>
+
+        <figure>
+          <img src="https://miro.medium.com/v2/resize:fit:1400/1*Ilpm8RG6GMYGD8rdT_OTmA.png" alt="Documented content pattern for a type of AC card, captured alongside the content guidelines." />
+        </figure>
+
+        <p>You can document this pattern alongside the content guidelines in the design system documentation or you can create a playbook specific to that type of content with additional information to help determine which pattern to use when.</p>
+
+        <h2>Benefits of content patterns and playbooks</h2>
+        <p>By developing content patterns not just for content types like AC cards, but that flex across different contexts and purposes, you can provide content designers with a firm foundation to begin their work. These patterns make it easier to build out terminology and consistent value-props for each feature. If you're using content components, snippets, or some other system for content reuse, you now have a system to organize and classify that language.</p>
+
+        <p>Though I hesitate to mention it for fear of promoting the idea that AI is capable of doing sophisticated content design work, having structured patterns also allows for GenAI solutions like Writer to more effectively create drafts for new content. Customized templates — along with a knowledge graph, style guide input, and exemplary content to train the LLM — make generation of a variety of working first drafts very efficient. From there, a content designer can carefully craft a final version.</p>
+
+        <p>Having these documented patterns already supported by research and agreed upon by a larger set of stakeholders allows content design to support their choices when facing feedback or explaining their work to new stakeholders or leadership. The patterns allow content designers a starting point with less moving pieces to consider as they analyze all of the inputs for the specific content solution. They can put their time into making sure the new solution fits well into the larger product set or into becoming experts in the subject matter.</p>
+
+        <p>The final result is less stress and burnout for content designers who are now able to focus their attention and efforts on what is still very complicated work. The final result for the product is more consistently effective content. And the final result for the user is a more coherent experience.</p>
+
+        <h2>References and acknowledgments</h2>
+        <div class="refs">
+          <p>Margot Bloomstein, <em>Content Strategy at Work: Real-World Stories to Strengthen Every Interactive Project</em>, Morgan Kaufmann/Elsevier, 2012.</p>
+          <p>Matthew Rayback, "Less talk: Designing beyond voice and tone," Confab conference, 2023.</p>
+          <p>Special thanks to my team at McAfee for all of your contributions to this work — I learn with you every day.</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="subscribe">
+      <h2>Get new pieces in your inbox</h2>
+      <p>A note when I publish something new — essays on content design, leadership, and GenAI. No spam, unsubscribe anytime.</p>
+      <!-- Kit (ConvertKit) form 9480292 -->
+      <form class="sub-form" id="kitForm" action="https://app.kit.com/forms/9480292/subscriptions" method="post" novalidate>
+        <input type="email" name="email_address" placeholder="you@example.com" aria-label="Email address" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="sub-note">No spam, unsubscribe anytime.</p>
+      <p id="kitThanks" style="display:none;font-family:'Inter Tight',sans-serif;font-weight:500;font-size:18px;color:var(--ink);margin:8px 0 0">Thanks — please check your inbox to confirm.</p>
+    </section>
+
+    <footer class="site">© 2026 Kate Agena</footer>
+  </div>
+<script>
+(function(){
+  var f=document.getElementById('kitForm');
+  if(!f) return;
+  f.addEventListener('submit', async function(e){
+    e.preventDefault();
+    var input=f.querySelector('input[name=email_address]');
+    var btn=f.querySelector('button');
+    var email=(input.value||'').trim();
+    if(!email){input.focus();return;}
+    var orig=btn.textContent; btn.disabled=true; btn.textContent='Subscribing…';
+    try{
+      var res=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}});
+      if(res.ok){ f.style.display='none'; var t=document.getElementById('kitThanks'); if(t) t.style.display='block'; }
+      else { btn.disabled=false; btn.textContent=orig; alert('Something went wrong. Please try again, or email me directly.'); }
+    }catch(err){ btn.disabled=false; btn.textContent=orig; alert('Network error. Please try again.'); }
+  });
+})();
+</script>
+</body>
+</html>
