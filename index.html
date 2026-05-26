@@ -254,8 +254,14 @@
   .articles-label{
     font-family:'Inter Tight',sans-serif;
     font-weight:500;color:var(--ink);
-    letter-spacing:-0.01em;margin:0 0 22px;
+    letter-spacing:-0.01em;margin:0 0 10px;
   }
+  .see-all{
+    display:inline-block;font-size:18px;color:var(--ink);
+    text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;
+    margin:0 0 28px;
+  }
+  .see-all:hover{color:var(--blue)}
   .article-grid{
     display:grid;grid-template-columns:repeat(3,1fr);gap:32px;align-items:start;
   }
@@ -435,15 +441,16 @@
       </div>
     </section>
 
-    <!-- Articles, interviews, & podcasts -->
+    <!-- Recent writing -->
     <section class="articles">
-      <h3 class="articles-label">Articles, interviews, &amp; podcasts</h3>
+      <h3 class="articles-label">Recent writing</h3>
+      <a class="see-all" href="writing.html">See all writing →</a>
       <div class="article-grid">
         <div class="article">
           <div class="article-thumb">
             <img src="assets/article-patterns.png" alt="The power of patterns and playbooks in content design" />
           </div>
-          <a class="title" href="https://uxdesign.cc/the-power-of-patterns-and-playbooks-in-content-design-6385a3d8d5bd" target="_blank" rel="noopener">The power of patterns and playbooks in content design</a>
+          <a class="title" href="patterns-and-playbooks.html">The power of patterns and playbooks in content design</a>
         </div>
         <div class="article">
           <div class="article-thumb">
