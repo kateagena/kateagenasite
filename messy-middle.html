@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The messy middle: What no one tells you about content design leadership — Kate Agena, PhD</title>
+<meta name="description" content="These three tensions don't resolve as you level up. That's the job, not a sign you're failing.">
+<link rel="canonical" href="https://kateagena.medium.com/the-messy-middle-what-no-one-tells-you-about-content-design-leadership-21fd1cba0535">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kate Agena">
+<meta property="og:title" content="The messy middle: What no one tells you about content design leadership">
+<meta property="og:description" content="These three tensions don't resolve as you level up. That's the job, not a sign you're failing.">
+<meta property="og:url" content="https://www.kateagena.com/messy-middle.html">
+<meta property="og:image" content="https://miro.medium.com/v2/resize:fit:1200/1*bpRyJvYFLnidmPxx_zUG8w.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The messy middle: What no one tells you about content design leadership">
+<meta name="twitter:description" content="These three tensions don't resolve as you level up. That's the job, not a sign you're failing.">
+<meta name="twitter:image" content="https://miro.medium.com/v2/resize:fit:1200/1*bpRyJvYFLnidmPxx_zUG8w.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%91%8B%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF9F7;--cream:#F8F4EE;--ink:#323232;--ink-2:#323232;--muted:#6a6a66;--rule:#d9d7cf;
+    --card:#FFF8DF;--card-border:#323232;--pill-bg:#FBF9F7;--dot:#B6CEFF;
+    --blue:#193497;--light-blue:#B6CEFF;--yellow:#FFDC60;--green:#00BE4A;--pink:#FFC7CE;
+    --field-bg:#B6CEFF;--field-border:#B6CEFF;--yellow-btn:#FFDC60;--yellow-btn-hover:#f0cb45;
+  }
+  *{box-sizing:border-box}
+  html{font-size:14px}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:'Inter', Helvetica, Arial, sans-serif;color:var(--ink);background:var(--bg);
+    background-image: radial-gradient(var(--dot) 1px, transparent 1px);background-size:14px 14px;
+    -webkit-font-smoothing:antialiased;line-height:1.5;
+  }
+  a{color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 40px}
+
+  header.site{padding:26px 0 8px}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .brand{font-family:'Inter Tight', Helvetica, Arial, sans-serif;font-weight:700;font-size:1.8rem;letter-spacing:-0.01em;color:var(--ink);text-decoration:none;line-height:1.1}
+  .nav-right{display:flex;align-items:center;gap:18px}
+  .nav-right a.navlink{font-size:18px;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;color:var(--ink)}
+  .li-btn{width:30px;height:30px;border-radius:5px;background:#111;color:#fff;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-size:12px;font-weight:700}
+  .li-btn:hover{background:#000}
+
+  .article{max-width:768px;margin:40px auto 0;background:#fff;border:1px solid var(--rule);border-radius:6px;padding:52px 60px;box-shadow:0 2px 12px rgba(50,50,50,0.05)}
+  .back{font-size:14px;color:var(--muted);text-decoration:none;display:inline-block;margin-bottom:28px}
+  .back:hover{color:var(--blue)}
+  .a-meta{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);margin-bottom:16px}
+  .tag{font-family:'Inter Tight',sans-serif;font-weight:600;font-size:11px;letter-spacing:0.04em;text-transform:uppercase;color:var(--blue);border:1.5px solid var(--light-blue);border-radius:999px;padding:3px 10px;background:var(--pill-bg)}
+  .a-title{font-family:'Inter Tight', Helvetica, Arial, sans-serif;font-weight:400;font-size:3.2rem;line-height:1.12;letter-spacing:-0.02em;margin:0 0 18px;color:var(--ink)}
+  .a-sub{font-size:20px;line-height:1.5;color:var(--muted);margin:0 0 22px}
+  .a-byline{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:14px 0;margin-bottom:32px}
+  .a-byline .who{font-size:14px;color:var(--ink)}
+  .a-byline a.medium{font-size:14px;color:var(--blue);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+
+  .body{font-size:19px;line-height:1.7;color:var(--ink)}
+  .body p{margin:0 0 22px}
+  .body h2{font-family:'Inter Tight',sans-serif;font-weight:500;font-size:1.9rem;line-height:1.2;letter-spacing:-0.01em;margin:44px 0 16px;color:var(--ink)}
+  .body h3{font-family:'Inter Tight',sans-serif;font-weight:600;font-size:1.35rem;line-height:1.25;margin:28px 0 12px;color:var(--ink)}
+  .body a{color:var(--blue);text-decoration:underline;text-underline-offset:2px}
+  .body em{font-style:italic}
+  .body ul{margin:0 0 22px;padding-left:24px}
+  .body li{margin:0 0 10px}
+  .body blockquote{font-family:'Inter Tight',sans-serif;font-weight:400;font-size:1.55rem;line-height:1.3;color:var(--blue);border-left:4px solid var(--light-blue);margin:30px 0;padding:6px 0 6px 22px}
+  figure{margin:30px 0;padding:0}
+  figure img{width:100%;height:auto;display:block;border:1px solid var(--rule);border-radius:3px;background:#fff}
+  figcaption{font-size:13px;color:var(--muted);margin-top:8px;text-align:center}
+
+  .subscribe{max-width:768px;margin:48px auto 0;background:var(--card);border:5px solid var(--card-border);border-radius:5px;box-shadow:5px 5px 0 0 var(--light-blue);padding:30px 34px 34px}
+  .subscribe h2{font-family:'Inter Tight',sans-serif;font-weight:400;font-size:2.1rem;line-height:1.15;letter-spacing:-0.02em;margin:0 0 8px;color:var(--ink)}
+  .subscribe p{font-size:16px;line-height:1.55;color:var(--ink);margin:0 0 18px;max-width:520px}
+  .sub-form{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .sub-form input[type=email]{flex:1;min-width:240px;background:var(--field-bg);border:1.5px solid var(--field-border);border-radius:28px;padding:13px 18px;font-family:inherit;font-size:15px;color:var(--ink);outline:none;transition:box-shadow .15s ease}
+  .sub-form input[type=email]:focus{box-shadow:0 0 0 3px rgba(25,52,151,0.22)}
+  .sub-form button{background:var(--yellow-btn);border:5px solid var(--yellow-btn);color:var(--ink);font-family:inherit;font-size:17px;font-weight:700;padding:9px 26px;border-radius:999px;cursor:pointer;transition:background .15s ease, transform .1s ease}
+  .sub-form button:hover{background:var(--yellow-btn-hover);border-color:var(--yellow-btn-hover)}
+  .sub-form button:active{transform:translateY(1px)}
+  .sub-note{font-size:12px;color:var(--muted);margin:14px 0 0}
+
+  footer.site{text-align:center;padding:64px 0 40px;font-size:12px;color:var(--muted)}
+
+  @media (max-width:800px){
+    html,body{overflow-x:hidden}
+    .wrap{padding:0 20px}
+    .brand{font-size:1.3rem;max-width:60vw}
+    .nav-right{gap:14px}.nav-right a.navlink{font-size:16px}
+    .article{margin-top:24px;padding:28px 22px;border-radius:5px}
+    .a-title{font-size:2.3rem}
+    .a-sub{font-size:17px}
+    .body{font-size:17px}
+    .body blockquote{font-size:1.3rem}
+    .subscribe{padding:24px 22px 28px}
+    .sub-form button{width:100%}
+    img{max-width:100%;height:auto}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <div class="nav">
+        <a href="index.html" class="brand">Content Design Leadership w/Kate Agena, PhD</a>
+        <div class="nav-right">
+          <a href="writing.html" class="navlink">Writing &amp; speaking</a>
+          <a href="contact.html" class="navlink">Start a conversation</a>
+          <a href="https://www.linkedin.com/in/kate-agena/" target="_blank" rel="noopener" class="li-btn" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+    </header>
+
+    <article class="article">
+      <a href="writing.html" class="back">← All writing</a>
+
+      <div class="a-meta"><span class="tag">Article</span><span>Jun 2, 2026 · 10 min read</span></div>
+      <h1 class="a-title">The messy middle: What no one tells you about content design leadership</h1>
+      <p class="a-sub">These three tensions don't resolve as you level up. That's the job, not a sign you're failing.</p>
+
+      <div class="a-byline">
+        <span class="who">By Kate Agena, PhD</span>
+        <a class="medium" href="https://kateagena.medium.com/the-messy-middle-what-no-one-tells-you-about-content-design-leadership-21fd1cba0535" target="_blank" rel="noopener">Read the original on Medium →</a>
+      </div>
+
+      <figure>
+        <img src="https://miro.medium.com/v2/resize:fit:1200/1*bpRyJvYFLnidmPxx_zUG8w.png" alt="Title illustration: The Messy Middle — What No One Tells You About Content Design Leadership." />
+        <figcaption>Image generated by ChatGPT</figcaption>
+      </figure>
+
+      <div class="body">
+        <p>It's 4 PM on a Friday. The hour I blocked for deep work — the slow, reflective vision and strategy work my job actually needs — is already gone. It went into the follow-ups that piled up all week, a meeting that popped up out of nowhere and ran long, and sometimes just sheer exhaustion.</p>
+
+        <p>This is what they don't tell you about leveling up: the part of the job that matters most is the part nobody schedules. It disappears first.</p>
+
+        <p>A year and a half into my VP role at SAP, I've started using a phrase for the space this puts you in: the messy middle. It isn't a sign you're failing at leadership. It's the job. The higher you go, the less your work is to resolve tension and the more it is to hold it.</p>
+
+        <p>Three tensions keep showing up in my own work, and in conversations with leaders at every level. Vision and execution. Collaboration and authority. Visibility and restraint. None of them resolve neatly; they're conditions to hold rather than problems to solve. That's a big part of what makes this phase so disorienting. And, I think, that's why so many capable people quietly decide they must be doing it wrong.</p>
+
+        <h2>Why this hits content designers hardest</h2>
+        <p>Content design culture prizes collaboration, humility, proximity to users, careful thinking. These are beautiful values. They're why a lot of us came to this work. But leadership roles tend to reward the other side of each one: clarity over nuance, speed over deliberation, presence over substance.</p>
+
+        <p>That friction between our values and what the role is asking of us is where a lot of us get stuck. It's also where some of us burn out. Not because we can't do the job, but because the job asks us to work against our own sense of who we are.</p>
+
+        <h2>Strategy doesn't get a calendar invite</h2>
+        <p>As you grow in leadership, you're expected to think strategically: to set direction, to have a point of view about where content design is going. You're also expected to deliver on a roadmap that never stops.</p>
+
+        <p>Vision isn't something you switch on between meetings. It takes the kind of sustained attention you can't find in the margins. The most important part of the job isn't scheduled, isn't required by your boss, and is the first thing to get crowded out. We feel the pressure to be visionary because we know how much it matters: for our teams, for the practice, for the future of content work itself. Knowing how much it matters and having the conditions to do it are two very different things. That gap is where the stress lives.</p>
+
+        <p>And yet making that space turned out to be one of the biggest keys to how I got here. People keep asking how I ended up in a VP role. The honest answer: it wasn't an obvious path.</p>
+
+        <p>I grew up in rural Iowa. My dad was a grain farmer; my mom was a registered nurse who worked a few hours a day as the school nurse. Neither had an undergraduate degree, yet it still felt natural to me to keep studying until I had a PhD. I didn't see what that did to me until a hard stretch at work, when my chief design officer mentioned some advice her father — a former CEO of five companies — had given her over dinner. And it hit me: no wonder some of this felt foreign. I didn't grow up watching anyone model executive behavior. I was learning it as I went.</p>
+
+        <p>Learning came naturally to me, and most of my strengths are strategic. Even when I couldn't see the path, the strategy work pulled me forward.</p>
+
+        <p>I tell you all this because the vision work is what actually moved me up. That same chief design officer became a key connection for my current role. The reason she thought I was ready was that I had shown her my vision for content design again and again: a future state, a team being reshaped into something future-ready, budget asks framed as bigger than the content team. I used the same work in my panel interview. As you move up, a case built on individual craft isn't what interests a hiring team. The vision doesn't have to be brand new. But it has to exist, and that means making space to do it.</p>
+
+        <p>The answer isn't just "find more time." The answer is that the definition of what vision even is has changed. More on that below.</p>
+
+        <h2>Role gravity changes what you can say</h2>
+        <p>You said something half-formed in yesterday's brainstorm — the kind of thought you used to throw out a hundred times a week. By this morning, someone repeated it in a meeting you weren't in. Now it's a decision. People are working off it. You're explaining yourself in a thread.</p>
+
+        <p>You didn't change. Your role did, and it carries more weight than it used to. I think of it as role gravity: the force that pulls meaning into everything you say and do, whether you meant it or not.</p>
+
+        <p>Noticing this has made me more empathetic toward the leaders above me. When I have a one-on-one with SAP's chief design officer, I come in wanting answers: the challenge I'm facing, my plan to tackle it, and a thumbs up or a different direction. That isn't always what I get. He's often in a holding pattern too, waiting on the board, the CEO, or the head of product and engineering. No matter how far up you go, the best move isn't only yours to make. He's in his own messy middle, holding it the same way I am.</p>
+
+        <p>Collaboration is core to how content designers work. We think with people, we build understanding together. So this loss is especially real for us. You get more careful. That can feel like losing the part of the work you loved most, thinking together. Being everyone's thought partner is wonderful, until people also need you to be the one who makes the call. The thing that made you good at the craft can complicate leading it.</p>
+
+        <h2>Even silence sends a message</h2>
+        <p>You're 24 minutes into a 30-minute meeting and you still haven't spoken. You don't disagree with what's been said. You're not sure what you'd add. You see that your team has things under control. But you can feel the room registering it: she's quiet. Maybe she disagrees. Maybe she's checked out. Neither is true. But silence at this level isn't neutral.</p>
+
+        <p>Speaking casually isn't neutral either. An offhand comment can set a direction you never intended. A question can be heard as doubt. A suggestion can be taken as a mandate. There's no neutral anymore.</p>
+
+        <p>It's why something as ordinary as a meeting starts feeling like high-stakes work. Camera off, on mute, half-listening while you clear your inbox. That can be worse than not showing up. Other meetings matter enough that you should be there with your camera on, even when you have nothing to add. And even then, it can matter to say something before it closes: thank someone, acknowledge progress, confirm who owns the takeaways.</p>
+
+        <p>This is deeply uncomfortable for people who value substance over performance. And that's a lot of us. We want the work to speak for itself. At a certain level, though, your presence is part of the work. Learning to hold that without losing yourself in it is its own skill. And it's one that nobody teaches you.</p>
+
+        <h2>The reframe</h2>
+        <p>Here's the reframe: these tensions aren't signs you're failing at leadership. They're signs your scope has expanded: you've grown into a space where the work is no longer about finding the right answer. It's about holding competing responsibilities at the same time. Harder, but not failure.</p>
+
+        <blockquote>The messy middle isn't failure. It's the job. The higher you go, the less your work is to resolve tension — and the more it is to hold it.</blockquote>
+
+        <p>It isn't only us. The conditions have changed. Orgs are flattening. Content design teams are more and more decentralized. Even very senior leaders are finding it harder to make the kind of impact that used to be possible in more hierarchical structures. And our scope has expanded into territory we're all still defining. It's no longer just in-product UI copy. It might mean shaping LLM output, designing the handoffs as users move between traditional and AI-driven experiences, or figuring out what content design even means when much of the content generates itself.</p>
+
+        <p>If the messy middle feels like more than ordinary growing pains, that's because it is. The field itself is in a messy middle. And some of what you're carrying isn't yours alone to fix. That matters because it separates "this is hard because leadership is hard" from "this is hard because the ground is shifting." Both are true. And knowing the difference removes a layer of self-blame the personal reframe can't reach.</p>
+
+        <h2>How to steady it</h2>
+        <h3>Steadiness is its own form of leadership</h3>
+        <p>You don't need certainty to lead. You need steadiness. The messy middle is, by definition, a place where clarity is scarce. A lot of us are waiting for clarity before we feel we can really step into leadership. That moment may not come. And right now, it probably won't. Steadiness in ambiguity is its own form of leadership. Maybe the most important form right now.</p>
+
+        <h3>Build foundations that scale your thinking</h3>
+        <p>Priorities shift. The things we used to put first — advocacy, scaling practices across ICs, building team infrastructure — still matter, but they may not be where the energy needs to go this year. What matters more right now is digging in: experimenting, carving out what our role looks like in this new landscape, and building foundations that scale our thinking even when we can't scale ourselves. That means the terminology, the patterns, the governance, the prompts. That's not abandoning what we built. It's adapting the vision to where it's needed most.</p>
+
+        <p>Here's where vision and execution come together. One exercise at any level: map out what a content function in your company would look like if it were truly set up for the future you see coming. When I was at McAfee, I did this as an org chart. Not the one I had, but the one I saw coming. I mapped each person across content strategy, tooling, guidelines, conversation design, and product areas based on their strengths, then showed it to my chief design officer to make the thinking visible.</p>
+
+        <p>You don't need to manage people to do this. The exercise gives you clarity on how a team could work, where the gaps are, and what you're building toward.</p>
+
+        <h3>Vision comes in waves</h3>
+        <p>The practical heart of this tension: you don't resolve vision versus execution by perfectly balancing your calendar. For me, vision comes in waves. What you can change is how you respond when it shows up. Let it sit in the background. But when something clicks and the direction gets clearer, capture it and treat it like real work. It is. It's not a distraction from delivery; it's part of delivery. You take a day off when you're sick. Block a day for vision when it arrives.</p>
+
+        <p><a href="https://www.hbs.edu/faculty/Pages/profile.aspx?facId=6479" target="_blank" rel="noopener">Linda Hill</a> talks about contextual intelligence: holding a vision that can adapt. In practice, even when everything is ambiguous, hold onto a vision. It doesn't have to be a five-year roadmap. It can be as grounded as "I'm going to build foundations that matter no matter what gets built on top." That's vision. That's strategy. And it's something you can hold even when the ground keeps moving. Ambiguity doesn't mean you've lost direction. It means the direction has to be held more loosely.</p>
+
+        <h2>What to hold onto</h2>
+        <p>The messy middle is real. It isn't a sign you're doing it wrong. It's the space where leadership actually happens.</p>
+
+        <p>Growth isn't becoming more impressive. It's becoming more useful in harder, higher-stakes ways. And you're not in it alone. Anyone who has ever felt split between vision and execution, between collaboration and authority, between wanting to speak and knowing when to hold back is in it too.</p>
+
+        <p>After more than 20 years in this work, my honest take is that we're needed more than ever. It may just take time before that's recognized. Use the cover of the messy middle to get as clear as you can on how you want to contribute in this next era and to get ready for it.</p>
+
+        <p>Three questions worth sitting with:</p>
+        <ul>
+          <li>Where are you over-investing in low-impact work?</li>
+          <li>Where are you under-investing in strategy and vision?</li>
+          <li>What kind of content leader do you want to become, even if your title never changes?</li>
+        </ul>
+
+        <p>If you've ever watched your Friday afternoon get eaten by follow-ups and three fires on the day work is supposed to ship, you know exactly what this phase asks of you. That doesn't mean you're failing at leadership. It means you're holding it. Don't go it alone. You're surrounded by people in the same struggle. The messy middle isn't where you're stuck. It's where you're growing. And if it feels messy, you're probably <em>exactly</em> where you're supposed to be.</p>
+
+        <p><em>Adapted from my talk at Growing in Content 2026. I think and talk through this kind of thing every week with the <a href="https://www.contentdesignleaders.com" target="_blank" rel="noopener">Content Design Leaders</a> community. If any of it resonated, I'd love to hear how the messy middle is showing up in your work. Find me on <a href="https://www.linkedin.com/in/kate-agena/" target="_blank" rel="noopener">LinkedIn</a>.</em></p>
+      </div>
+    </article>
+
+    <section class="subscribe">
+      <h2>Get new pieces in your inbox</h2>
+      <p>A note when I publish something new — essays on content design, leadership, and GenAI. No spam, unsubscribe anytime.</p>
+      <!-- Kit (ConvertKit) form 9480292 -->
+      <form class="sub-form" id="kitForm" action="https://app.kit.com/forms/9480292/subscriptions" method="post" novalidate>
+        <input type="email" name="email_address" placeholder="you@example.com" aria-label="Email address" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="kitThanks" style="display:none;font-family:'Inter Tight',sans-serif;font-weight:500;font-size:18px;color:var(--ink);margin:8px 0 0">Thanks — please check your inbox to confirm.</p>
+    </section>
+
+    <footer class="site">© 2026 Kate Agena<br>Site originally designed by Kate in Squarespace and recreated using Claude Design.</footer>
+  </div>
+<script>
+(function(){
+  var f=document.getElementById('kitForm');
+  if(!f) return;
+  f.addEventListener('submit', async function(e){
+    e.preventDefault();
+    var input=f.querySelector('input[name=email_address]');
+    var btn=f.querySelector('button');
+    var email=(input.value||'').trim();
+    if(!email){input.focus();return;}
+    var orig=btn.textContent; btn.disabled=true; btn.textContent='Subscribing…';
+    try{
+      var res=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}});
+      if(res.ok){ f.style.display='none'; var t=document.getElementById('kitThanks'); if(t) t.style.display='block'; }
+      else { btn.disabled=false; btn.textContent=orig; alert('Something went wrong. Please try again, or email me directly.'); }
+    }catch(err){ btn.disabled=false; btn.textContent=orig; alert('Network error. Please try again.'); }
+  });
+})();
+</script>
+</body>
+</html>

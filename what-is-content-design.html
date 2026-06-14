@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>What is content design, really? — Kate Agena, PhD</title>
+<meta name="description" content="Defining a field that is always in flux. A look at where content design came from, where it sits, and what it really means to practice it as a UX design discipline.">
+<link rel="canonical" href="https://kateagena.medium.com/what-is-content-design-really-749917e2ba3c">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kate Agena">
+<meta property="og:title" content="What is content design, really?">
+<meta property="og:description" content="Defining a field that is always in flux.">
+<meta property="og:url" content="https://www.kateagena.com/what-is-content-design.html">
+<meta property="og:image" content="https://miro.medium.com/v2/resize:fit:1200/1*e1DQkLcT5hk2YCknBmpILg.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What is content design, really?">
+<meta name="twitter:description" content="Defining a field that is always in flux.">
+<meta name="twitter:image" content="https://miro.medium.com/v2/resize:fit:1200/1*e1DQkLcT5hk2YCknBmpILg.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%91%8B%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF9F7;--cream:#F8F4EE;--ink:#323232;--ink-2:#323232;--muted:#6a6a66;--rule:#d9d7cf;
+    --card:#FFF8DF;--card-border:#323232;--pill-bg:#FBF9F7;--dot:#B6CEFF;
+    --blue:#193497;--light-blue:#B6CEFF;--yellow:#FFDC60;--green:#00BE4A;--pink:#FFC7CE;
+    --field-bg:#B6CEFF;--field-border:#B6CEFF;--yellow-btn:#FFDC60;--yellow-btn-hover:#f0cb45;
+  }
+  *{box-sizing:border-box}
+  html{font-size:14px}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:'Inter', Helvetica, Arial, sans-serif;color:var(--ink);background:var(--bg);
+    background-image: radial-gradient(var(--dot) 1px, transparent 1px);background-size:14px 14px;
+    -webkit-font-smoothing:antialiased;line-height:1.5;
+  }
+  a{color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 40px}
+
+  header.site{padding:26px 0 8px}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .brand{font-family:'Inter Tight', Helvetica, Arial, sans-serif;font-weight:700;font-size:1.8rem;letter-spacing:-0.01em;color:var(--ink);text-decoration:none;line-height:1.1}
+  .nav-right{display:flex;align-items:center;gap:18px}
+  .nav-right a.navlink{font-size:18px;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;color:var(--ink)}
+  .li-btn{width:30px;height:30px;border-radius:5px;background:#111;color:#fff;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-size:12px;font-weight:700}
+  .li-btn:hover{background:#000}
+
+  .article{max-width:768px;margin:40px auto 0;background:#fff;border:1px solid var(--rule);border-radius:6px;padding:52px 60px;box-shadow:0 2px 12px rgba(50,50,50,0.05)}
+  .back{font-size:14px;color:var(--muted);text-decoration:none;display:inline-block;margin-bottom:28px}
+  .back:hover{color:var(--blue)}
+  .a-meta{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);margin-bottom:16px}
+  .tag{font-family:'Inter Tight',sans-serif;font-weight:600;font-size:11px;letter-spacing:0.04em;text-transform:uppercase;color:var(--blue);border:1.5px solid var(--light-blue);border-radius:999px;padding:3px 10px;background:var(--pill-bg)}
+  .a-title{font-family:'Inter Tight', Helvetica, Arial, sans-serif;font-weight:400;font-size:3.2rem;line-height:1.12;letter-spacing:-0.02em;margin:0 0 18px;color:var(--ink)}
+  .a-sub{font-size:20px;line-height:1.5;color:var(--muted);margin:0 0 22px}
+  .a-byline{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:14px 0;margin-bottom:32px}
+  .a-byline .who{font-size:14px;color:var(--ink)}
+  .a-byline a.medium{font-size:14px;color:var(--blue);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+
+  .body{font-size:19px;line-height:1.7;color:var(--ink)}
+  .body p{margin:0 0 22px}
+  .body h2{font-family:'Inter Tight',sans-serif;font-weight:500;font-size:1.9rem;line-height:1.2;letter-spacing:-0.01em;margin:44px 0 16px;color:var(--ink)}
+  .body h3{font-family:'Inter Tight',sans-serif;font-weight:600;font-size:1.35rem;line-height:1.25;margin:28px 0 12px;color:var(--ink)}
+  .body a{color:var(--blue);text-decoration:underline;text-underline-offset:2px}
+  .body em{font-style:italic}
+  .body strong{font-weight:600}
+  figure{margin:30px 0;padding:0}
+  figure img{width:100%;height:auto;display:block;border:1px solid var(--rule);border-radius:3px;background:#fff}
+  figcaption{font-size:13px;color:var(--muted);margin-top:8px;text-align:center}
+
+  .subscribe{max-width:768px;margin:48px auto 0;background:var(--card);border:5px solid var(--card-border);border-radius:5px;box-shadow:5px 5px 0 0 var(--light-blue);padding:30px 34px 34px}
+  .subscribe h2{font-family:'Inter Tight',sans-serif;font-weight:400;font-size:2.1rem;line-height:1.15;letter-spacing:-0.02em;margin:0 0 8px;color:var(--ink)}
+  .subscribe p{font-size:16px;line-height:1.55;color:var(--ink);margin:0 0 18px;max-width:520px}
+  .sub-form{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .sub-form input[type=email]{flex:1;min-width:240px;background:var(--field-bg);border:1.5px solid var(--field-border);border-radius:28px;padding:13px 18px;font-family:inherit;font-size:15px;color:var(--ink);outline:none;transition:box-shadow .15s ease}
+  .sub-form input[type=email]:focus{box-shadow:0 0 0 3px rgba(25,52,151,0.22)}
+  .sub-form button{background:var(--yellow-btn);border:5px solid var(--yellow-btn);color:var(--ink);font-family:inherit;font-size:17px;font-weight:700;padding:9px 26px;border-radius:999px;cursor:pointer;transition:background .15s ease, transform .1s ease}
+  .sub-form button:hover{background:var(--yellow-btn-hover);border-color:var(--yellow-btn-hover)}
+  .sub-form button:active{transform:translateY(1px)}
+  .sub-note{font-size:12px;color:var(--muted);margin:14px 0 0}
+
+  footer.site{text-align:center;padding:64px 0 40px;font-size:12px;color:var(--muted)}
+
+  @media (max-width:800px){
+    html,body{overflow-x:hidden}
+    .wrap{padding:0 20px}
+    .brand{font-size:1.3rem;max-width:60vw}
+    .nav-right{gap:14px}.nav-right a.navlink{font-size:16px}
+    .article{margin-top:24px;padding:28px 22px;border-radius:5px}
+    .a-title{font-size:2.3rem}
+    .a-sub{font-size:17px}
+    .body{font-size:17px}
+    .subscribe{padding:24px 22px 28px}
+    .sub-form button{width:100%}
+    img{max-width:100%;height:auto}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <div class="nav">
+        <a href="index.html" class="brand">Content Design Leadership w/Kate Agena, PhD</a>
+        <div class="nav-right">
+          <a href="writing.html" class="navlink">Writing &amp; speaking</a>
+          <a href="contact.html" class="navlink">Start a conversation</a>
+          <a href="https://www.linkedin.com/in/kate-agena/" target="_blank" rel="noopener" class="li-btn" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+    </header>
+
+    <article class="article">
+      <a href="writing.html" class="back">← All writing</a>
+
+      <div class="a-meta"><span class="tag">Article</span><span>Jun 1, 2026 · 7 min read</span></div>
+      <h1 class="a-title">What is content design, really?</h1>
+      <p class="a-sub">Defining a field that is always in flux.</p>
+
+      <div class="a-byline">
+        <span class="who">By Kate Agena, PhD</span>
+        <a class="medium" href="https://kateagena.medium.com/what-is-content-design-really-749917e2ba3c" target="_blank" rel="noopener">Read the original on Medium →</a>
+      </div>
+
+      <figure>
+        <img src="https://miro.medium.com/v2/resize:fit:1200/1*e1DQkLcT5hk2YCknBmpILg.png" alt="Collage of UX content design and content strategy community resources — books, podcasts, conferences, courses, and prominent voices in the field — on a deep blue background." />
+      </figure>
+
+      <div class="body">
+        <p>If you work in tech and you've heard the term "content design," there's a good chance you've also heard it used to mean wildly different things. That's not an accident. Content design is a discipline still defining itself — and depending on where you encounter it, it can look like UX writing, content strategy, information architecture, or something else entirely.</p>
+
+        <p>I lead content design at SAP, where the discipline is new. As I've started building it out, one of the most common questions I get is: what does content design actually look like outside of our walls? This article is my attempt to answer that — to paint a picture of how the discipline has evolved in the broader industry, where it sits, and what it really means to practice it as a UX design discipline.</p>
+
+        <h2>The naming problem</h2>
+        <p>Let's start with the elephant in the room: nobody agrees on what to call us. Content designer. UX writer. Content strategist. Conversation designer. Microcopy writer. Content engineer. Context designer. Product writer. The list goes on — and those are just the titles in active use at real companies right now.</p>
+
+        <p>This isn't just a branding problem. It reflects the fact that content design draws from many traditions and has been shaped by different organizational needs. Some companies hired "UX writers" because they needed someone to write interface copy. Others hired "content strategists" because they needed someone to think about the bigger picture. The work often overlaps, but the framing changes depending on who's hiring, what they think they need, and what the industry was calling the role that year.</p>
+
+        <p>For clarity in this article, I'll use "content design" as the umbrella term — not because it's the only valid one, but because it best captures the scope of what this discipline has become.</p>
+
+        <h2>Where it came from</h2>
+        <p>Content design didn't spring up fully formed. It grew out of the convergence of several established fields: information architecture, human-computer interaction, usability, technical communication, content strategy, journalism, writing for the web, and content marketing, among others.</p>
+
+        <p>Each of these disciplines contributed something essential. Information architecture brought structural thinking about how content should be organized and found. Usability and HCI brought evidence-based methods and a focus on how people actually interact with interfaces. Technical communication brought rigor around clarity, precision, and audience awareness. Journalism contributed narrative skill and economy of language. Content strategy introduced the idea that content needs governance, planning, and lifecycle management — not just good writing.</p>
+
+        <p>Content design synthesizes all of these into a practice that lives squarely within UX. It's not just about writing well. It's about understanding human behavior, product systems, and communication as interconnected design problems.</p>
+
+        <h2>What it is now</h2>
+        <p>Today, content design has its own ecosystem. There are dedicated conferences like Button and Growing in Content. There are foundational books — Sarah Winters' <em>Content Design</em>, Torrey Podmajersky's <em>Strategic Writing for UX</em>, Kinneret Yifrah's <em>Microcopy: The Complete Guide</em>. There are podcasts, courses, and thriving professional communities.</p>
+
+        <p>This maturation matters because it signals that content design is no longer a function that companies tack on as an afterthought. It's a discipline with established methods, a growing body of knowledge, and practitioners who have spent careers refining how it's done.</p>
+
+        <h2>Where content design sits in an organization</h2>
+        <p>One of the things that varies most from company to company is where content designers actually sit in the org chart. There are a few common models.</p>
+
+        <p>In the <strong>team of one</strong> model, a single content designer covers an entire product or portfolio. This person is often spread thin but has a wide view of the experience. They tend to become generalists by necessity.</p>
+
+        <p>In the <strong>centralized</strong> model, content designers report to a content design manager within the design organization, but are assigned to work on specific products alongside other designers. This gives content design its own leadership and career path while still embedding the work in product teams.</p>
+
+        <p>In the <strong>embedded</strong> model, content designers report directly to a product team's design manager, sitting alongside other designers and researchers. They're fully integrated into a single team, which deepens product knowledge but can leave them without a content design peer community.</p>
+
+        <p>The <strong>federated</strong> model combines elements of both: content designers are embedded in product teams but also belong to a central content design practice. This core team handles things like standards, shared tools, career development, and cross-product consistency, while individual content designers stay close to their product work.</p>
+
+        <p>Each model has trade-offs, and many organizations evolve through several of them as they grow. But in all of these structures, the ideal design pod — the smallest effective unit of design — typically includes a designer, a content designer, and a researcher working as peers.</p>
+
+        <h2>But what do content designers actually do?</h2>
+        <p>Here's where the biggest misconception lives. Many people assume content designers are writers who sit downstream of the design process, polishing UI text after the "real" design decisions have been made. That's UX writing — and it's a legitimate and important part of the work — but it's not the full picture.</p>
+
+        <p>Content designers solve UX problems through strategic communication and language. They use data and evidence to give users what they need, when they need it, and in a way they expect.</p>
+
+        <p>That distinction matters. It means content design is a problem-solving discipline, not a production discipline. And it operates by a set of principles that put it firmly in the design family.</p>
+
+        <h3>Start with the problem, not the content.</h3>
+        <p>A content designer's first question isn't "what should this say?" It's "what problem are we solving?" Just like an interaction designer wouldn't start laying out screens before understanding the user's task, a content designer doesn't start writing before understanding what's standing in the user's way. The content — its format, its structure, whether it exists at all — should be a response to a clearly defined problem.</p>
+
+        <h3>Use content as a design material, not a layer.</h3>
+        <p>In many organizations, content is treated as a finishing step: designs are created with placeholder text, and then someone is asked to "fill in the words." Content design flips this. Language, structure, and information hierarchy are design materials — just as fundamental as layout, color, and interaction patterns. When content is woven into the design process from the start, the resulting experience is more coherent and more usable.</p>
+
+        <h3>Seek to solve with design before content.</h3>
+        <p>This one surprises people. Yes, content designers sometimes advocate for less content. If a user is confused by a flow, the answer may not be better explanatory text — it may be a simpler flow that doesn't need explanation. A good content designer looks at the whole interaction and asks whether the design itself could eliminate the need for words. The best content is often no content at all.</p>
+
+        <h3>Use design methods to inform design decisions.</h3>
+        <p>Content designers don't rely on instinct or personal preference. They use the same methods other designers use: user research, usability testing, A/B testing, competitive analysis, heuristic reviews, audits, and data analysis. Content choices — what to say, how to say it, where to say it — are design decisions, and they deserve the same rigor as any other.</p>
+
+        <h3>Apply systems thinking across the whole experience.</h3>
+        <p>Content doesn't exist in isolation. A label in one part of the product has to make sense alongside labels everywhere else. An error message has to work within the larger pattern of how the product communicates errors. Content designers think in systems — building and maintaining patterns, terminology frameworks, and voice guidelines that scale across products and teams. This systems perspective is what separates content design from writing: it's not about crafting individual strings of text, it's about designing a coherent language system for an entire experience.</p>
+
+        <h2>Why it matters</h2>
+        <p>If you've been doing UX writing — crafting clear, useful interface text — you're already doing valuable work. But content design asks you to zoom out. It asks you to question whether the right content is appearing at the right time, whether the information architecture supports the user's mental model, whether the product's language is consistent and systematic, and whether a design problem might be better solved by rethinking the experience rather than adding more words.</p>
+
+        <p>Content design is a UX design discipline. The material is language. The methods are design methods. And the goal — like all good design — is to make complex things simple for the people who use them.</p>
+      </div>
+    </article>
+
+    <section class="subscribe">
+      <h2>Get new pieces in your inbox</h2>
+      <p>A note when I publish something new — essays on content design, leadership, and GenAI. No spam, unsubscribe anytime.</p>
+      <!-- Kit (ConvertKit) form 9480292 -->
+      <form class="sub-form" id="kitForm" action="https://app.kit.com/forms/9480292/subscriptions" method="post" novalidate>
+        <input type="email" name="email_address" placeholder="you@example.com" aria-label="Email address" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="kitThanks" style="display:none;font-family:'Inter Tight',sans-serif;font-weight:500;font-size:18px;color:var(--ink);margin:8px 0 0">Thanks — please check your inbox to confirm.</p>
+    </section>
+
+    <footer class="site">© 2026 Kate Agena<br>Site originally designed by Kate in Squarespace and recreated using Claude Design.</footer>
+  </div>
+<script>
+(function(){
+  var f=document.getElementById('kitForm');
+  if(!f) return;
+  f.addEventListener('submit', async function(e){
+    e.preventDefault();
+    var input=f.querySelector('input[name=email_address]');
+    var btn=f.querySelector('button');
+    var email=(input.value||'').trim();
+    if(!email){input.focus();return;}
+    var orig=btn.textContent; btn.disabled=true; btn.textContent='Subscribing…';
+    try{
+      var res=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}});
+      if(res.ok){ f.style.display='none'; var t=document.getElementById('kitThanks'); if(t) t.style.display='block'; }
+      else { btn.disabled=false; btn.textContent=orig; alert('Something went wrong. Please try again, or email me directly.'); }
+    }catch(err){ btn.disabled=false; btn.textContent=orig; alert('Network error. Please try again.'); }
+  });
+})();
+</script>
+</body>
+</html>
