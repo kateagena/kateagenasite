@@ -262,15 +262,17 @@
     margin:0 0 28px;
   }
   .see-all:hover{color:var(--blue)}
-  .upcoming-note{
-    display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;
-    font-size:16px;line-height:1.55;color:var(--ink);margin:0 0 26px;max-width:760px;
+  .upcoming-strip{
+    border-left:4px solid var(--green);border-radius:0;background:#EFF8F1;
+    padding:14px 18px;margin:0 0 26px;max-width:680px;
   }
-  .upcoming-note a{color:var(--blue);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
-  .upcoming-tag{
-    font-family:'Inter Tight',sans-serif;font-weight:600;font-size:11px;letter-spacing:0.04em;text-transform:uppercase;
-    color:#0a7a35;border:1.5px solid #00BE4A;border-radius:999px;padding:3px 10px;background:#FBF9F7;
+  .upcoming-strip .uc-label{
+    font-family:'Inter Tight',sans-serif;font-weight:600;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;
+    color:#0a7a35;margin:0 0 5px;
   }
+  .upcoming-strip .uc-line{font-size:16px;color:var(--ink);margin:0 0 3px}
+  .upcoming-strip .uc-line a{color:var(--blue);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+  .upcoming-strip .uc-title{font-family:'Inter Tight',sans-serif;font-size:15px;color:#52524e;margin:0;line-height:1.4}
   .article-grid{
     display:grid;grid-template-columns:repeat(3,1fr);gap:32px;align-items:start;
   }
@@ -454,7 +456,11 @@
     <section class="articles">
       <h3 class="articles-label">Recent writing &amp; conversations</h3>
       <a class="see-all" href="writing.html">See all writing →</a>
-      <p class="upcoming-note"><span class="upcoming-tag">Upcoming</span> Hosting a panel at <a href="https://www.buttonevents.com/2026-sessions/what-got-us-here-wont-get-us-there-repositioning-content-design-for-whats-next" target="_blank" rel="noopener">Button 2026</a> — "What got us here won't get us there: Repositioning content design for what's next."</p>
+      <div class="upcoming-strip">
+        <p class="uc-label">Upcoming</p>
+        <p class="uc-line">Hosting a panel at <a href="https://www.buttonevents.com/2026-sessions/what-got-us-here-wont-get-us-there-repositioning-content-design-for-whats-next" target="_blank" rel="noopener">Button 2026</a></p>
+        <p class="uc-title">“What got us here won't get us there: Repositioning content design for what's next”</p>
+      </div>
       <div class="article-grid">
         <div class="article">
           <div class="article-thumb">

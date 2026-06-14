@@ -140,7 +140,12 @@
   }
   .talk{display:flex;gap:24px;padding:20px 0;border-top:1px solid var(--rule)}
   .talk:last-child{border-bottom:1px solid var(--rule)}
-  .talk-date{flex:0 0 150px;font-size:14px;color:var(--muted);padding-top:3px}
+  .talk-logo{flex:0 0 120px;height:80px;border-radius:2px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .talk-logo img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+  .logo-button{background:#fff;border:1px solid var(--rule);padding:16px}
+  .logo-gic{background:#ffc104}
+  .gic-mark{font-family:'Inter Tight',sans-serif;font-weight:700;font-size:15px;line-height:1.04;text-align:center;color:#241d04}
+  .gic-yr{font-weight:500;font-size:13px}
   .talk-body{flex:1;min-width:0}
   .talk-event{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
   .talk-role{
@@ -157,7 +162,7 @@
   @media (max-width:800px){
     .speaking{margin-top:64px}
     .talk{flex-direction:column;gap:6px}
-    .talk-date{flex:none;padding-top:0}
+    .talk-logo{flex:none;width:120px;height:72px}
   }
 
   footer.site{text-align:center;padding:64px 0 40px;font-size:12px;color:var(--muted)}
@@ -260,9 +265,9 @@
       <div class="speak-group">
         <p class="speak-group-label">Upcoming</p>
         <div class="talk">
-          <div class="talk-date">Button 2026 · Online</div>
+          <div class="talk-logo logo-button"><img src="https://cdn.prod.website-files.com/67609b88c3358b51f9403c2a/69f8bcd6cb687c10e300e820_Button%20logo.svg" alt="Button" /></div>
           <div class="talk-body">
-            <div class="talk-event"><span class="talk-role upcoming">Panel host</span></div>
+            <div class="talk-event"><span class="talk-role upcoming">Panel host</span><span class="talk-venue">Button 2026 · Sep 24–25 · Online</span></div>
             <p class="talk-title">What got us here won't get us there: Repositioning content design for what's next</p>
             <p class="talk-desc">Hosting a panel on repositioning content design as a strategic business capability as teams flatten and AI reshapes the work — with Natalie Marie Dunbar, Kim Bennett, and Jenny Mero.</p>
             <div class="talk-links"><a href="https://www.buttonevents.com/2026-sessions/what-got-us-here-wont-get-us-there-repositioning-content-design-for-whats-next" target="_blank" rel="noopener">Session details →</a></div>
@@ -273,18 +278,18 @@
       <div class="speak-group">
         <p class="speak-group-label">Past</p>
         <div class="talk">
-          <div class="talk-date">Apr 30, 2026 · Online</div>
+          <div class="talk-logo logo-gic"><span class="gic-mark">Growing in<br>Content<br><span class="gic-yr">2026</span></span></div>
           <div class="talk-body">
-            <div class="talk-event"><span class="talk-role">Speaker</span><span class="talk-venue">Growing in Content 2026</span></div>
+            <div class="talk-event"><span class="talk-role">Speaker</span><span class="talk-venue">Apr 30, 2026 · Online</span></div>
             <p class="talk-title">The messy middle: Holding vision and execution in content leadership</p>
             <p class="talk-desc">Why leadership gets more contradictory as you level up — and how to hold the tension between vision and execution as a normal phase of growth.</p>
             <div class="talk-links"><a href="https://kateagena.medium.com/the-messy-middle-what-no-one-tells-you-about-content-design-leadership-21fd1cba0535" target="_blank" rel="noopener">Read the article →</a><a href="https://workingincontent.com/growing/program/the-messy-middle" target="_blank" rel="noopener">Session details →</a></div>
           </div>
         </div>
         <div class="talk">
-          <div class="talk-date">Aug 23, 2024 · Online</div>
+          <div class="talk-logo logo-gic"><span class="gic-mark">Growing in<br>Content<br><span class="gic-yr">2024</span></span></div>
           <div class="talk-body">
-            <div class="talk-event"><span class="talk-role">Speaker</span><span class="talk-venue">Growing in Content 2024</span></div>
+            <div class="talk-event"><span class="talk-role">Speaker</span><span class="talk-venue">Aug 23, 2024 · Online</span></div>
             <p class="talk-title">Leveling up as a content designer: From IC to senior director and beyond</p>
             <p class="talk-desc">How the job changes at every step up the ladder, and how to make the case for content roles at higher levels of leadership.</p>
             <div class="talk-links"><a href="https://workingincontent.com/growing-2024/program/leveling-up" target="_blank" rel="noopener">Session details →</a><span class="talk-soon">Article coming soon</span></div>
