@@ -248,7 +248,10 @@
   /* Community */
   .community{margin-top:100px}
   .community-label{font-family:'Inter Tight',sans-serif;font-weight:500;color:var(--ink);margin:0 0 28px;letter-spacing:-0.01em}
-  .community-card{background:var(--card);border:5px solid var(--card-border);border-radius:5px;box-shadow:6px 6px 0 0 var(--light-blue);padding:34px 40px 36px;max-width:760px}
+  .community-card{background:var(--card);border:5px solid var(--card-border);border-radius:5px;box-shadow:6px 6px 0 0 var(--light-blue);padding:34px 44px;max-width:none;display:flex;gap:44px;align-items:center}
+  .community-text{flex:1.5;min-width:0}
+  .community-logo{flex:1;display:flex;justify-content:center}
+  .community-logo img{width:100%;max-width:320px;height:auto;display:block}
   .community-role{font-family:'Inter Tight',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:var(--blue);margin:0 0 8px}
   .community-card h3{font-family:'Inter Tight',sans-serif;font-weight:400;font-size:2.4rem;line-height:1.15;letter-spacing:-0.02em;margin:0 0 14px;color:var(--ink)}
   .community-body{font-size:18px;line-height:1.6;color:var(--ink);margin:0 0 18px;max-width:600px}
@@ -353,7 +356,9 @@
     .mission-card-wrap{display:block;margin-top:16px}
     .mission-card{max-width:100%;width:100%;font-size:1.6rem;padding:22px 24px}
     .community{margin-top:64px}
-    .community-card{padding:24px 22px}
+    .community-card{padding:24px 22px;flex-direction:column;align-items:flex-start;gap:22px}
+    .community-logo{justify-content:flex-start}
+    .community-logo img{max-width:240px}
     .community-card h3{font-size:1.9rem}
     .community-body{font-size:16px}
     .focus{margin-top:60px}
@@ -523,11 +528,14 @@
     <section class="community">
       <div class="community-label">Community</div>
       <div class="community-card">
-        <p class="community-role">Founder &amp; host</p>
-        <h3>Content Design Leaders</h3>
-        <p class="community-body">Leading content design can be isolating. I built Content Design Leaders to change that — a membership community where leaders meet every week to share real work, talk through the parts no one warns you about, and advance content design as both a craft and a leadership practice.</p>
-        <p class="community-meta">Weekly since August 2024 · For managers &amp; ICs who lead<br>Sponsor of Button, Growing in Content, Lead with Tempo, Information Architecture Conference, and Throughline</p>
-        <a class="community-cta" href="https://www.contentdesignleaders.com" target="_blank" rel="noopener">Visit Content Design Leaders →</a>
+        <div class="community-text">
+          <p class="community-role">Founder &amp; host</p>
+          <h3>Content Design Leaders</h3>
+          <p class="community-body">Leading content design can be isolating. I built Content Design Leaders to change that — a membership community where leaders meet every week to share real work, talk through the parts no one warns you about, and advance content design as both a craft and a leadership practice.</p>
+          <p class="community-meta">Weekly since August 2024 · For managers &amp; ICs who lead<br>Sponsor of Button, Growing in Content, Lead with Tempo, Information Architecture Conference, and Throughline</p>
+          <a class="community-cta" href="https://www.contentdesignleaders.com" target="_blank" rel="noopener">Visit Content Design Leaders →</a>
+        </div>
+        <div class="community-logo"><img src="assets/CDL_logo.png" alt="Content Design Leaders" /></div>
       </div>
     </section>
 
