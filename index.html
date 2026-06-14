@@ -202,7 +202,7 @@
     font-size:12px;color:var(--muted);
   }
 
-  .cap-label, .focus-label, .mission-label, .articles-label, .about-label, .trusted-label{
+  .cap-label, .focus-label, .mission-label, .articles-label, .about-label, .trusted-label, .community-label{
     font-size:3.53rem;line-height:1.05;letter-spacing:-0.02em;
   }
 
@@ -243,6 +243,17 @@
     color:var(--ink);
   }
   .mission-card p{margin:0}
+
+  /* Community */
+  .community{margin-top:100px}
+  .community-label{font-family:'Inter Tight',sans-serif;font-weight:500;color:var(--ink);margin:0 0 28px;letter-spacing:-0.01em}
+  .community-card{background:var(--card);border:5px solid var(--card-border);border-radius:5px;box-shadow:6px 6px 0 0 var(--light-blue);padding:34px 40px 36px;max-width:760px}
+  .community-role{font-family:'Inter Tight',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:var(--blue);margin:0 0 8px}
+  .community-card h3{font-family:'Inter Tight',sans-serif;font-weight:400;font-size:2.4rem;line-height:1.15;letter-spacing:-0.02em;margin:0 0 14px;color:var(--ink)}
+  .community-body{font-size:18px;line-height:1.6;color:var(--ink);margin:0 0 18px;max-width:600px}
+  .community-meta{font-size:14px;color:var(--muted);margin:0 0 22px}
+  .community-cta{font-family:'Inter Tight',sans-serif;font-weight:500;font-size:18px;color:var(--blue);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+  .community-cta:hover{color:var(--ink)}
 
   /* Articles */
   .articles{
@@ -328,7 +339,7 @@
     .hello{font-size:2rem}
     .brand{font-size:1.3rem;max-width:60vw}
 
-    .cap-label, .focus-label, .mission-label, .articles-label, .about-label, .trusted-label{
+    .cap-label, .focus-label, .mission-label, .articles-label, .about-label, .trusted-label, .community-label{
       font-size:2.4rem;
     }
 
@@ -340,6 +351,10 @@
     }
     .mission-card-wrap{display:block;margin-top:16px}
     .mission-card{max-width:100%;width:100%;font-size:1.6rem;padding:22px 24px}
+    .community{margin-top:64px}
+    .community-card{padding:24px 22px}
+    .community-card h3{font-size:1.9rem}
+    .community-body{font-size:16px}
     .focus{margin-top:60px}
     .focus-accordion-wrap{max-width:100% !important;width:100% !important;margin-top:16px}
     .acc{max-width:100% !important}
@@ -394,10 +409,11 @@
         <div class="pills-row">
           <span class="pill green">Foundations</span>
           <span class="pill lavender">Team building</span>
-          <span class="pill pink">Hiring</span>
+          <span class="pill pink">Community building</span>
         </div>
         <div class="pills-row">
           <span class="pill yellow">Content strategy</span>
+          <span class="pill pink">Hiring</span>
           <span class="pill blue">GenAI strategy</span>
         </div>
       </div>
@@ -513,8 +529,19 @@
           <p>With decades working to elevate writing professions, Kate's content design origin story started with a PhD from Purdue University's Rhetoric and Composition program before joining IBM's legendary User Technology group at the Silicon Valley Lab, just as DITA became an OASIS standard.</p>
           <p>Her 2008 research asserted that technical communicators could use the emergence of iterative software development processes to influence the design process on behalf of the user from the earliest stages.</p>
           <p>She's brought this same vision to content design, where she built the UX product content org at McAfee, where her team was present from the start and actively led the design process. She is now VP of Content Design at SAP.</p>
-          <p>Kate is also the founder of <a href="https://www.contentdesignleaders.com" target="_blank" rel="noopener">Content Design Leaders</a>, a membership community that connects UX content design leaders to collaborate to advance the field and their own careers.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- Community -->
+    <section class="community">
+      <div class="community-label">Community</div>
+      <div class="community-card">
+        <p class="community-role">Founder &amp; host</p>
+        <h3>Content Design Leaders</h3>
+        <p class="community-body">Leading content design can be isolating. I built Content Design Leaders to change that — a membership community where leaders meet every week to share real work, talk through the parts no one warns you about, and advance content design as both a craft and a leadership practice.</p>
+        <p class="community-meta">Weekly since August 2024 · For managers &amp; ICs who lead<br>Sponsor of Button, Growing in Content, Lead with Tempo, Information Architecture Conference, and Throughline</p>
+        <a class="community-cta" href="https://www.contentdesignleaders.com" target="_blank" rel="noopener">Visit Content Design Leaders →</a>
       </div>
     </section>
 
